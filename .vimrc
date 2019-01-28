@@ -7,6 +7,7 @@ Plug 'jnurmine/Zenburn'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tomasr/molokai'
 Plug 'ajmwagar/vim-deus'
+Plug 'plasticboy/vim-markdown'
 
 """
 
@@ -87,7 +88,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'mileszs/ack.vim' 
 call plug#end()
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
+" let g:deoplete#enable_smart_case = 1
 
 
 
@@ -125,6 +126,7 @@ set hidden
 "
 set wildmenu
 set wildmode=list:longest
+set wildignore+=*.o
 
 "search
 "
@@ -154,14 +156,14 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
-noremap <C-C> <esc>
+noremap <C-C> <Esc>
 
 "mouse
 set mousehide
 set mouse=nicr
 
 set foldmethod=indent
-set foldlevelstart=50
+set foldlevelstart=20
 set foldlevel=0
 
 
@@ -177,14 +179,16 @@ map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
 
-let g:ale_set_highlights = 0
+let g:ale_set_highlights = 1
 let g:ale_change_sign_column_color = 0
+let g:ale_completion_enabled=1
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
-let g:ale_echo_msg_error_str = '✖'
+let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = '⚠'
 let g:ale_echo_msg_format = '%severity% %s% [%linter%% code%]'
+let g:ale_lint_on_enter=1 
 
 let mapleader = ","
 let maplocalleader = "'"
@@ -210,7 +214,6 @@ set nobackup
 
 
 set history=1000
-noremap <C-C> <esc>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -249,7 +252,11 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
-
+	
+let g:lightline.tabline = {
+  \   'left': [ ['tabs'] ],
+  \   'right': [ ['close'] ]
+  \ }
 let g:tmuxline_preset = {
     \'a'       : ['#(whoami)', '#S'],
     \'win'     : ['#I', '#W'],
@@ -263,7 +270,7 @@ let g:tmuxline_preset = {
 " let g:ctrlp_cmd = 'CtrlP'
 " let g:ctrlp_working_path_mode = 'ra'
 
-" let g:fzf_layout = { 'right': '~20%' }
+let g:fzf_layout = { 'down': '~40%' }
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
