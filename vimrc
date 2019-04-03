@@ -1,135 +1,124 @@
+
 call plug#begin('~/.vim/plugged')
 
-"colorschemes 
+"Appearance
 Plug 'dracula/vim'
 Plug 'sjl/badwolf'
 Plug 'jnurmine/Zenburn'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tomasr/molokai'
 Plug 'ajmwagar/vim-deus'
+Plug 'itchyny/lightline.vim'
+Plug 'edkolev/tmuxline.vim'
+
+" Languages
 Plug 'plasticboy/vim-markdown'
-
-"""
-
-"#####
-"Helpers
-Plug 'sheerun/vim-polyglot'
+" Plug 'zchee/deoplete-jedi'
+" Plug 'zchee/deoplete-clang'
 Plug 'pangloss/vim-javascript'
-Plug 'zchee/deoplete-jedi'
+Plug 'sheerun/vim-polyglot'
+Plug 'javier-lopez/sml.vim'
+Plug 'w0rp/ale'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
+if has('nvim')
+  " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'bfredl/nvim-miniyank'
+ 
+
+" Improvement
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-abolish'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'metakirby5/codi.vim'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-eunuch'
+Plug 'mhinz/vim-startify'
+Plug 'Yggdroot/indentLine'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'machakann/vim-highlightedyank'
+
+""SICP setup
+Plug 'jpalardy/vim-slime'
+let g:slime_target = "tmux"
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 
+"""
+"#####
 " Plug 'alvan/vim-closetag'
 "auto complete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'bfredl/nvim-miniyank'
-  map p <Plug>(miniyank-autoput)
-  map P <Plug>(miniyank-autoPut)
-endif
 "
-Plug 'zchee/deoplete-clang'
 "##########################
-"IDE
-Plug 'itchyny/lightline.vim'
-"vim linter
-Plug 'w0rp/ale'
 
-Plug 'haya14busa/incsearch.vim'
-"Tmux 
-Plug 'edkolev/tmuxline.vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'easymotion/vim-easymotion'
-
-if has('nvim')
-  endif
-Plug 'teranex/jk-jumps.vim'
+" Project
 Plug 'scrooloose/nerdtree'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'ConradIrwin/vim-bracketed-paste'
-" interactive scratchpad 
-Plug 'metakirby5/codi.vim'
-Plug 'machakann/vim-highlightedyank'
-Plug 'mhinz/vim-startify'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-sleuth'
-Plug 'airblade/vim-gitgutter'
-Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 
+
+Plug 'easymotion/vim-easymotion'
+Plug 'haya14busa/incsearch.vim'
+Plug '/rking/ag.vim'
+
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'teranex/jk-jumps.vim'
+" see the use of it
+" Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "Plug 'milkypostman/vim-togglelist'
-" single line statement to multiple line 
-Plug 'AndrewRadev/splitjoin.vim'
 Plug 'majutsushi/tagbar'
-"Comands like Delete, Rename
-Plug 'tpope/vim-eunuch'
 Plug 'duggiefresh/vim-easydir'
 
-"Interactive scratchpad 
 Plug 'junegunn/goyo.vim'
-Plug 'wikitopian/hardmode'
 Plug 'vimwiki/vimwiki'
 " git plugin
-Plug 'tpope/vim-fugitive'
-" Support
 " Make
 Plug 'tpope/vim-dispatch'
 "
 " Plug 'embear/vim-localvimrc'
-"Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-repeat'
-"
-Plug 'tpope/vim-surround'
-" close parenthesis, brackets etc
-Plug 'tpope/vim-unimpaired'
-Plug 'Raimondi/delimitMate'
-"Plug 'msanders/snipmate.vim'
-Plug 'tomtom/tcomment_vim'
-" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-" Plug 'ctrlpvim/ctrlp.vim'
-Plug 'mileszs/ack.vim' 
-call plug#end()
-let g:deoplete#enable_at_startup = 1
-" let g:deoplete#enable_smart_case = 1
+" Plug 'editorconfig/editorconfig-vim'
 
+"Plug 'msanders/snipmate.vim'
+" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" Plug 'mileszs/ack.vim' 
+call plug#end()
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_smart_case = 1
+ endif
+
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeWinSize=42
 
 
 nmap <F8> :TagbarToggle <CR>
 set shell =/bin/bash
-
-"Show line number
-set number
-"Show cursor position
-set ruler
-
-"Show title
-set title
+set textwidth=100
+set relativenumber
+set ruler  " Show cursor position
+set title "Show cursor position
 set nohlsearch
-
-
-"Enable syntax highlightning
 set nocompatible
 syntax on
-" filetype plugin on 
-
-"Display incomplete commands
-set noshowcmd
-" Display the mode you're in.
- set showmode
-"
-" " Intuitive backspacing.
-set backspace=indent,eol,start
-
-" " Handle multiple buffers better.
-set hidden
-
-" set ts=4 sw=4 et
-"Enhanced command line completion
-"
+filetype plugin on 
+filetype indent on
+set noshowcmd "Display incomplete commands
+ set showmode " Display the mode you're in.
+set backspace=indent,eol,start " Intuitive backspacing.
+set hidden " Handle multiple buffers better.
 set wildmenu
 set wildmode=list:longest
 set wildignore+=*.o
-
 "search
-"
 set ignorecase
 set incsearch
 set smartcase
@@ -137,30 +126,25 @@ set laststatus=2
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-
-
 set t_Co=256
 set background=dark
-colorscheme deus
+colorscheme PaperColor
 
 set cmdheight=1
 
-" indentation
-"
 set autoindent
 set smartindent
 
-set noexpandtab
 set smarttab
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set expandtab
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 
+set nobackup
 noremap <C-C> <Esc>
 
-"mouse
-set mousehide
-set mouse=nicr
+set history=1000
 
 set foldmethod=indent
 set foldlevelstart=20
@@ -185,10 +169,10 @@ let g:ale_completion_enabled=1
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = '⚠'
-let g:ale_echo_msg_format = '%severity% %s% [%linter%% code%]'
 let g:ale_lint_on_enter=1 
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
 
 let mapleader = ","
 let maplocalleader = "'"
@@ -199,7 +183,6 @@ nnoremap <leader>c :tabclose
 nnoremap <leader>n :tabnext<cr>
 nnoremap <leader>p :tabprevious<cr>
 "
-" nnoremap <C-P> :Files<cr>
 
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
@@ -210,20 +193,12 @@ nnoremap z0 zR
 nnoremap zC zM
 nnoremap zc zc
 
-set nobackup
 
 
-set history=1000
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-
-" augroup doxygen_comments
-"     autocmd!
-"     autocmd FileType c,cpp set comments^=:///
-"   augroup end
-"
 
 "Vim fugitive commands
 nnoremap <silent> <leader>gs  :Gstatus<CR>
@@ -242,7 +217,7 @@ nnoremap <C-P> :Files<cr>
 nnoremap <C-F> :Ag 
 "
 let g:lightline = {
-      \ 'colorscheme': 'deus',
+      \ 'colorscheme': 'PaperColor',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
@@ -262,29 +237,26 @@ let g:tmuxline_preset = {
     \'win'     : ['#I', '#W'],
     \'cwin'    : ['#I', '#W'],
     \'x'       : ['#{prefix_highlight}'],
-    \'z'       : ['On: #{online_status}', '#{battery_icon} #{battery_percentage}', '%R'],
+    \'z'       : ['On: #{online_status}', 'Batt: #{battery_icon} #{battery_percentage}', '%R'],
     \'options' : {'status-justify' : 'left'}}
 " }}}
 "
-" let g:ctrlp_map = '<c-p>'
-" let g:ctrlp_cmd = 'CtrlP'
-" let g:ctrlp_working_path_mode = 'ra'
 
 let g:fzf_layout = { 'down': '~40%' }
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
-
+" let g:fzf_colors =
+" \ { 'fg':      ['fg', 'Normal'],
+"   \ 'bg':      ['bg', 'Normal'],
+"   \ 'hl':      ['fg', 'Comment'],
+"   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+"   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+"   \ 'hl+':     ['fg', 'Statement'],
+"   \ 'info':    ['fg', 'PreProc'],
+"   \ 'prompt':  ['fg', 'Conditional'],
+"   \ 'pointer': ['fg', 'Exception'],
+"   \ 'marker':  ['fg', 'Keyword'],
+"   \ 'spinner': ['fg', 'Label'],
+"   \ 'header':  ['fg', 'Comment'] }
+"
 
 fun! RemapPaneArrows()
   nnoremap <buffer> <silent> <Right> :vertical resize +5<cr>
@@ -312,10 +284,8 @@ fun! RemapArrows()
   vnoremap <buffer> <silent> <Up> <nop>
   vnoremap <buffer> <silent> <Down> <nop>
 endfun
-
-
 set completeopt-=preview
-
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set list
 map <leader>ev :e! ~/.vimrc<cr>
+let g:slime_paste_file = "$HOME/.slime_paste"
