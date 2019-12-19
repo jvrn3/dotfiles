@@ -29,6 +29,8 @@ set spelllang=pt_br,en_us
 set linebreak
 set textwidth=110
 
+set undolevels=1500
+
 set lazyredraw
 
 set list
