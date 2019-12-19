@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/jvrn3/dotfiles'
+let g:netrw_dirhist_2='/home/jvrn3'
+let g:netrw_dirhist_3='/home/jvrn3/coding'
+let g:netrw_dirhist_4='/home/jvrn3/coding/faculdade'
+let g:netrw_dirhist_5='/home/jvrn3/coding/faculdade/SO_video'
+let g:netrw_dirhist_6='/home/jvrn3/coding/faculdade/SO_video/src'
+let g:netrw_dirhist_7='/home/jvrn3/coding/faculdade/SO_video/src/Servidor'

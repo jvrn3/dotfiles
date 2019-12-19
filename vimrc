@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 
 "Appearance
@@ -7,40 +6,39 @@ Plug 'sjl/badwolf'
 Plug 'jnurmine/Zenburn'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 Plug 'ajmwagar/vim-deus'
 Plug 'itchyny/lightline.vim'
 Plug 'edkolev/tmuxline.vim'
+Plug 'arcticicestudio/nord-vim'
 
-" Languages
-Plug 'plasticboy/vim-markdown'
-" Plug 'zchee/deoplete-jedi'
-" Plug 'zchee/deoplete-clang'
+"Languages 
+" Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'sheerun/vim-polyglot'
 Plug 'javier-lopez/sml.vim'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-
+Plug 'mattn/emmet-vim'
 if has('nvim')
-  " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'bfredl/nvim-miniyank'
- 
+  set termguicolors
 
 " Improvement
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-abolish'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'metakirby5/codi.vim'
-Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-surround' " Surrounding pairs
+Plug 'tpope/vim-unimpaired' " Bracket pairs
+Plug 'Raimondi/delimitMate'  " Closing parentheses etc
+Plug 'tpope/vim-abolish' " Quick renaming etc
+Plug 'christoomey/vim-tmux-navigator' " Vim/tmux seamless navigation
+Plug 'tpope/vim-eunuch' "Unix commands
 Plug 'mhinz/vim-startify'
-Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine' " Vertical lines indentation
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'machakann/vim-highlightedyank'
+Plug 'machakann/vim-highlightedyank' " Highlight yank
+Plug 'majutsushi/tagbar' " Provides a sidebar displaying ctags tags
 
 ""SICP setup
 Plug 'jpalardy/vim-slime'
@@ -49,152 +47,185 @@ Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 
 """
 "#####
-" Plug 'alvan/vim-closetag'
-"auto complete
+Plug 'alvan/vim-closetag'
+" Plug 'metakirby5/codi.vim'
+" Plug 'tpope/vim-sleuth'
 "
 "##########################
 
 " Project
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf.vim'
-
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
-Plug '/rking/ag.vim'
+Plug 'rking/ag.vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'teranex/jk-jumps.vim'
-" see the use of it
-" Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "Plug 'milkypostman/vim-togglelist'
-Plug 'majutsushi/tagbar'
 Plug 'duggiefresh/vim-easydir'
 
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim' " Distraction free scratchpad
 Plug 'vimwiki/vimwiki'
-" git plugin
-" Make
-Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch' " Make
+
 "
-" Plug 'embear/vim-localvimrc'
+Plug 'embear/vim-localvimrc'
 " Plug 'editorconfig/editorconfig-vim'
 
 "Plug 'msanders/snipmate.vim'
-" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-" Plug 'mileszs/ack.vim' 
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'tpope/vim-vinegar'
+
 call plug#end()
-" let g:deoplete#enable_at_startup = 1
 " let g:deoplete#enable_smart_case = 1
  endif
 
-map p <Plug>(miniyank-autoput)
-map P <Plug>(miniyank-autoPut)
-let NERDTreeQuitOnOpen = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeWinSize=42
+ let g:netrw_liststyle = 3
+ let g:netrw_banner = 0
+ let g:netrw_browse_split = 2
+ let g:netrw_winsize = 25
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:coc_status_error_sign = '•'
+let g:coc_status_warning_sign = '•'
+" let NERDTreeQuitOnOpen = 1
+" let NERDTreeMinimalUI = 1
+" let NERDTreeDirArrows = 1
+" let NERDTreeWinSize=42
+" nmap <F3> :NERDTreeToggle<cr>
 
-
-nmap <F8> :TagbarToggle <CR>
-set shell =/bin/bash
-set textwidth=100
+set nocompatible
+set shell=/bin/bash
+set textwidth=80
 set relativenumber
 set ruler  " Show cursor position
 set title "Show cursor position
 set nohlsearch
-set nocompatible
 syntax on
 filetype plugin on 
 filetype indent on
 set noshowcmd "Display incomplete commands
- set showmode " Display the mode you're in.
+set cursorline " 
+
+set noshowmode " Display the mode you're in.
 set backspace=indent,eol,start " Intuitive backspacing.
 set hidden " Handle multiple buffers better.
 set wildmenu
+
 set wildmode=list:longest
 set wildignore+=*.o
+set updatetime=300
+
 "search
-set ignorecase
-set incsearch
+set ignorecase 
+set incsearch " Incremental search 
 set smartcase
 set laststatus=2
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
 set t_Co=256
 set background=dark
-colorscheme PaperColor
+colorscheme nord 
 
 set cmdheight=1
+" ========== Indentation ===========
 
 set autoindent
 set smartindent
-
 set smarttab
 set expandtab
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 
 set nobackup
-noremap <C-C> <Esc>
+set noswapfile
+" noremap <C-C> <Esc>
+inoremap jk <esc>
+inoremap <esc> <nop>
 
 set history=1000
 
+" ========== Folding ==========
+
 set foldmethod=indent
-set foldlevelstart=20
 set foldlevel=0
+" set nofoldenable
 
 
 " open window below the code
 set splitbelow
 set scrolloff=3
 
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
-nmap <F3> :NERDTreeToggle<cr>
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+nmap <F8> :TagbarToggle <CR>
+
+
 noremap H ^
 noremap L $
 map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
 
-let g:ale_set_highlights = 1
-let g:ale_change_sign_column_color = 0
-let g:ale_completion_enabled=1
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = '✖'
-let g:ale_sign_warning = '⚠'
-let g:ale_lint_on_enter=1 
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
+" let g:ale_set_highlights = 1
+" let g:ale_change_sign_column_color = 0
+" let g:ale_completion_enabled=1
+" let g:ale_sign_column_always = 1
+" let g:ale_sign_error = '✖'
+" let g:ale_sign_warning = '⚠'
+" let g:ale_lint_on_enter=1 
+" nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+" nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let mapleader = ","
 let maplocalleader = "'"
 
+inoremap <silent><expr> <leader>cr coc#refresh()
+nnoremap <silent> <leader>ca  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>ce  :<C-u>CocList extensions<cr>
 nnoremap <leader>t :tabnew<cr>
 nnoremap <leader>e :tabedit
 nnoremap <leader>c :tabclose
 nnoremap <leader>n :tabnext<cr>
 nnoremap <leader>p :tabprevious<cr>
-"
+
+
+" Use `[c` and `]c` to navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 nmap <S-Enter> O<Esc>
-"folding
+
+"Folding
 nnoremap <Space> za
 nnoremap z0 zR
 nnoremap zC zM
 nnoremap zc zc
 
-
-
+"FZF
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+nnoremap <C-P> :Files<cr>
+nnoremap <C-F> :Ag 
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -211,20 +242,17 @@ nnoremap <silent> <leader>gw  :Gwrite<CR>
 nnoremap <silent> <leader>gwq :Gwrite<CR>:qa<CR>
 nnoremap <silent> <leader>ge :Gedit<CR>
 
-"FZF
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-nnoremap <C-P> :Files<cr>
-nnoremap <C-F> :Ag 
 "
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \             [ 'gitbranch','cocstatus', 'readonly', 'filename', 'modified' ] ],
       \   'right': [['percent'], ['lineinfo']]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
+      \   'gitbranch': 'fugitive#head',
+      \  'cocstatus': 'coc#status'
       \ },
       \ }
 	
@@ -237,26 +265,12 @@ let g:tmuxline_preset = {
     \'win'     : ['#I', '#W'],
     \'cwin'    : ['#I', '#W'],
     \'x'       : ['#{prefix_highlight}'],
-    \'z'       : ['On: #{online_status}', 'Batt: #{battery_icon} #{battery_percentage}', '%R'],
+    \'z'       : ['On: #{online_status}','Batt: #{battery_icon} #{battery_percentage}', '%R'],
     \'options' : {'status-justify' : 'left'}}
 " }}}
+"'♫ #{spotify_status}'
 "
-
 let g:fzf_layout = { 'down': '~40%' }
-" let g:fzf_colors =
-" \ { 'fg':      ['fg', 'Normal'],
-"   \ 'bg':      ['bg', 'Normal'],
-"   \ 'hl':      ['fg', 'Comment'],
-"   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-"   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-"   \ 'hl+':     ['fg', 'Statement'],
-"   \ 'info':    ['fg', 'PreProc'],
-"   \ 'prompt':  ['fg', 'Conditional'],
-"   \ 'pointer': ['fg', 'Exception'],
-"   \ 'marker':  ['fg', 'Keyword'],
-"   \ 'spinner': ['fg', 'Label'],
-"   \ 'header':  ['fg', 'Comment'] }
-"
 
 fun! RemapPaneArrows()
   nnoremap <buffer> <silent> <Right> :vertical resize +5<cr>
@@ -284,8 +298,14 @@ fun! RemapArrows()
   vnoremap <buffer> <silent> <Up> <nop>
   vnoremap <buffer> <silent> <Down> <nop>
 endfun
+
 set completeopt-=preview
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set list
 map <leader>ev :e! ~/.vimrc<cr>
+map <leader>et :e! ~/.tmux.conf<cr>
 let g:slime_paste_file = "$HOME/.slime_paste"
+
+"Remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+" let sml_interactive=1
