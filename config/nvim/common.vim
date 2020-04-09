@@ -18,6 +18,7 @@ set shortmess+=afilmnrxoOtT
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
+set mouse=a
 " ======= INDENTATION =======
 set autoindent
 set smartindent
@@ -36,6 +37,7 @@ set lazyredraw
 set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 
+set autoread
 
 
 
@@ -63,3 +65,4 @@ set wildignore+=.git,.hg,.svn
   "autocmd!
   "autocmd VimEnter * :Vexplore
 "augroup END
+

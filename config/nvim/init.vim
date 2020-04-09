@@ -13,6 +13,7 @@ let s:config_files = [
         \'plugins/vimwiki.vim',
         \'plugins/rainbow.vim',
         \'plugins/lightline.vim',
+        \'plugins/nerdtree.vim',
 \]
 
 for file in s:config_files

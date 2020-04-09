@@ -27,13 +27,17 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'honza/vim-snippets'
 
     "Project
-
     Plug 'tpope/vim-fugitive'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'junegunn/fzf.vim'
     Plug 'liuchengxu/vista.vim'
     Plug 'Yggdroot/indentLine' " Vertical lines indentation
+    Plug 'preservim/nerdtree'
+    Plug 'Glench/Vim-Jinja2-Syntax'
+    Plug 'metakirby5/codi.vim'
+
+    Plug 'wakatime/vim-wakatime'
     "Plug 'pope/vim-vinegar'
      Plug 'mbbill/undotree'   
     "Writing

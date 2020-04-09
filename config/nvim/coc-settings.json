@@ -1,16 +1,16 @@
 {
-"signature.target": "float",
-"diagnostic.messageTarget": "float",
- "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-      "initializationOptions": {
-         "cache": {
-           "directory": "/tmp/ccls"
-         }
-       }
-    }
-  }
+  "coc.preferences.formatOnSaveFiletypes": [
+      "javascript",
+      "typescript",
+      "json",
+      "python",
+      "*.py"
+  ],
+  "eslint.autoFixOnSave" : true,
+  "python.linting.pylintArgs": ["--load-plugins", "pylint-flask"],
+  "python.linting.pylintEnabled": true,
+  "python.formatting.blackPath":"/home/jvrn3/.local/bin/black",
+  "python.formatting.provider": "black",
+
+
 }
