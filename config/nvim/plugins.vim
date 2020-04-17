@@ -9,21 +9,22 @@ endif
 
 call plug#begin('~/.local/share/nvim/plugged')
     Plug 'mhinz/vim-startify'
-    " Appearance    
+    " Appearance
     Plug 'itchyny/lightline.vim'
-    Plug 'machakann/vim-highlightedyank' 
+    Plug 'machakann/vim-highlightedyank'
     "Motion
     Plug 'sheerun/vim-polyglot'
     Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-repeat'
     Plug 'scrooloose/nerdcommenter'
-    Plug 'tpope/vim-unimpaired' 
-    Plug 'christoomey/vim-tmux-navigator' 
+    Plug 'tpope/vim-unimpaired'
+    Plug 'christoomey/vim-tmux-navigator'
     Plug 'tpope/vim-rsi'
     Plug 'luochen1990/rainbow'
     "Plug 'Raimondi/delimitMate'  " Closing parentheses etc
     "Snippets
     Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+    Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
 
     "Project
@@ -36,10 +37,11 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'Glench/Vim-Jinja2-Syntax'
     Plug 'metakirby5/codi.vim'
+    Plug 'gregsexton/MatchTag'
 
     Plug 'wakatime/vim-wakatime'
     "Plug 'pope/vim-vinegar'
-     Plug 'mbbill/undotree'   
+     Plug 'mbbill/undotree'
     "Writing
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
     Plug 'vimwiki/vimwiki'
