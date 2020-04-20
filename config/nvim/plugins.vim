@@ -21,10 +21,12 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'tpope/vim-rsi'
     Plug 'luochen1990/rainbow'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     "Plug 'Raimondi/delimitMate'  " Closing parentheses etc
     "Snippets
-    Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
-    Plug 'SirVer/ultisnips'
+    "Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+    "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+    "Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
 
     "Project
@@ -39,7 +41,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'metakirby5/codi.vim'
     Plug 'gregsexton/MatchTag'
 
-    Plug 'wakatime/vim-wakatime'
+    "Plug 'wakatime/vim-wakatime'
     "Plug 'pope/vim-vinegar'
      Plug 'mbbill/undotree'
     "Writing

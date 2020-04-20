@@ -2,10 +2,10 @@
 
 set nocompatible
 set termguicolors
-let g:python3_host_prog = "/home/jvrn3/.pyenv/versions/neovim/bin/python" 
-let g:python_host_prog = " /home/jvrn3/.pyenv/versions/neovim2/bin/python"
+"let g:python3_host_prog = $HOME."/.pyenv/versions/neovim/bin/python" 
+"let g:python_host_prog = $HOME."/.pyenv/versions/neovim2/bin/python"
 
-let s:config_path = '/home/jvrn3/.config/nvim/'
+let s:config_path = $HOME."/.config/nvim/"
 let s:config_files = [
             \'common.vim',
 	    \'mappings.vim',
