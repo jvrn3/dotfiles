@@ -8,7 +8,7 @@ endif
 
 
 call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'mhinz/vim-startify'  " 
+    Plug 'mhinz/vim-startify'
     " Appearance
     Plug 'itchyny/lightline.vim'
     Plug 'machakann/vim-highlightedyank'
@@ -24,8 +24,9 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'rbgrouleff/bclose.vim'
     "Plug 'Raimondi/delimitMate'  " Closing parentheses etc
     "Snippets
-    Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
-
+    "Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+    "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+    "Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
 
     "Project
