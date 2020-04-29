@@ -27,5 +27,6 @@ for file in s:config_files
 endfor
 map <leader>ev :e! ~/.vimrc<cr>
 set background=dark
+set encoding=UTF-8
 colorscheme base16-tomorrow-night
 
