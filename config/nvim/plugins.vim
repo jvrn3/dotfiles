@@ -8,7 +8,7 @@ endif
 
 
 call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'mhinz/vim-startify'
+    Plug 'mhinz/vim-startify'  " 
     " Appearance
     Plug 'itchyny/lightline.vim'
     Plug 'machakann/vim-highlightedyank'
@@ -21,10 +21,11 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'tpope/vim-rsi'
     Plug 'luochen1990/rainbow'
+    Plug 'rbgrouleff/bclose.vim'
     "Plug 'Raimondi/delimitMate'  " Closing parentheses etc
     "Snippets
     Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
-    Plug 'SirVer/ultisnips'
+
     Plug 'honza/vim-snippets'
 
     "Project
@@ -38,6 +39,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'Glench/Vim-Jinja2-Syntax'
     Plug 'metakirby5/codi.vim'
     Plug 'gregsexton/MatchTag'
+    Plug 'jpalardy/vim-slime'
 
     Plug 'wakatime/vim-wakatime'
     "Plug 'pope/vim-vinegar'
@@ -50,4 +52,4 @@ call plug#begin('~/.local/share/nvim/plugged')
     "Notekeeping
     Plug 'vimwiki/vimwiki'
 call plug#end()
-let g:webdevicons_enable_startify = 1
+"let g:webdevicons_enable_startify = 1

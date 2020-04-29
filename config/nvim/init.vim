@@ -16,7 +16,8 @@ let s:config_files = [
         \'plugins/rainbow.vim',
         \'plugins/lightline.vim',
         \'plugins/nerdtree.vim',
-\]
+        \'plugins/slime.vim',
+        \]
 
 for file in s:config_files
 	if filereadable(s:config_path.file)
