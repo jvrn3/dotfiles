@@ -17,6 +17,7 @@ let s:config_files = [
         \'plugins/lightline.vim',
         \'plugins/nerdtree.vim',
         \'plugins/slime.vim',
+        \'plugins/tmuxline.vim',
         \]
 
 for file in s:config_files
@@ -26,5 +27,5 @@ for file in s:config_files
 endfor
 map <leader>ev :e! ~/.vimrc<cr>
 set background=dark
-colorscheme papercolor
+colorscheme base16-tomorrow-night
 

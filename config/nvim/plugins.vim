@@ -19,6 +19,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-unimpaired'
     Plug 'christoomey/vim-tmux-navigator'
+    Plug 'edkolev/tmuxline.vim'
     Plug 'tpope/vim-rsi'
     Plug 'luochen1990/rainbow'
     Plug 'rbgrouleff/bclose.vim'
