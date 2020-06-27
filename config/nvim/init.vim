@@ -2,22 +2,26 @@
 
 set nocompatible
 set termguicolors
-"let g:python3_host_prog = $HOME."/.pyenv/versions/neovim/bin/python" 
+let g:python3_host_prog = $HOME."/.pyenv/versions/neovim/bin/python" 
 "let g:python_host_prog = $HOME."/.pyenv/versions/neovim2/bin/python"
 
 let s:config_path = $HOME."/.config/nvim/"
 let s:config_files = [
             \'common.vim',
-	    \'mappings.vim',
-	    \'plugins.vim',
-        \'plugins/coc.vim',
-        \'plugins/fzf.vim',
-        \'plugins/vimwiki.vim',
-        \'plugins/rainbow.vim',
-        \'plugins/lightline.vim',
-        \'plugins/nerdtree.vim',
-        \'plugins/slime.vim',
-        \'plugins/tmuxline.vim',
+            \'functions.vim',
+            \'mappings.vim',
+            \'plugins.vim',
+            \'plugins/coc.vim',
+            \'plugins/fzf.vim',
+            \'plugins/vimwiki.vim',
+            \'plugins/rainbow.vim',
+            \'plugins/lightline.vim',
+            \'plugins/nerdtree.vim',
+            \'plugins/slime.vim',
+            \'plugins/tmuxline.vim',
+            \'plugins/pencil.vim',
+            \'plugins/ale.vim',
+            \'plugins/omnisharp.vim'
         \]
 
 for file in s:config_files
@@ -25,6 +29,7 @@ for file in s:config_files
 		exec "so ".s:config_path.file
 	endif
 endfor
+
 map <leader>ev :e! ~/.vimrc<cr>
 set background=dark
 set encoding=UTF-8

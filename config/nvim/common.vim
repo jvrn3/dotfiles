@@ -1,17 +1,17 @@
-set relativenumber
+" TODO: comment all lines explaining the commands
+set number relativenumber
 syntax on
 set ruler "Show cursor position
 
 " ======= SEARCH =======
 set nohlsearch
 set ignorecase
-set title 
+set title
 set smartcase
 
-filetype plugin indent on
 set updatetime=300
 set hidden
-set cursorline 
+set cursorline
 set wildmenu
 set laststatus=2
 set shortmess+=afilmnrxoOtT
@@ -19,6 +19,8 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set mouse=a
+set termguicolors
+
 " ======= INDENTATION =======
 set autoindent
 set smartindent
@@ -28,8 +30,7 @@ set noswapfile
 set scrolloff=3
 set spelllang=pt_br,en_us
 set linebreak
-set textwidth=110
-
+set colorcolumn=80
 set undolevels=1500
 
 set lazyredraw
@@ -39,11 +40,7 @@ set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 
 set autoread
 
-
-
-
-noremap H ^
-noremap L $
+set wildmode=longest,list,full
 
 set wildignore+=*.ai,*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.psd,*.webp
 set wildignore+=*.aux,*.out,*.toc
@@ -56,13 +53,7 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=.git,.hg,.svn
 
 
-"let g:netrw_banner = 0
-"let g:netrw_liststyle = 3
-"let g:netrw_browse_split = 4
-"let g:netrw_altv = 1
-"let g:netrw_winsize = 15
-"augroup ProjectDrawer
-  "autocmd!
-  "autocmd VimEnter * :Vexplore
-"augroup END
+autocmd FileType tex, latex, markdown, txt setlocal spell=en_US
+autocmd BufWritePre * %s/\s\+$//e
+
 

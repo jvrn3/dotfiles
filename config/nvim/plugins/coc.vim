@@ -4,7 +4,6 @@ let g:coc_status_warning_sign = '•'
 let g:coc_global_extensions = [
             \ 'coc-json',  
             \  'coc-lists',
-            \  'coc-python', 
             \  'coc-vimlsp',
             \  'coc-tsserver',
             \ 'coc-eslint',
@@ -15,7 +14,6 @@ let g:coc_global_extensions = [
             \  'coc-highlight', 
             \  'coc-snippets', 
             \  'coc-emmet',
-            \ 'coc-omnisharp'
 \ ]
 
 set signcolumn=yes
@@ -74,3 +72,5 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 let g:OmniSharp_server_stdio = 1
+
+inoremap <silent><expr> <c-a> coc#refresh()

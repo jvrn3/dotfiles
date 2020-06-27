@@ -8,48 +8,52 @@ endif
 
 
 call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'mhinz/vim-startify'
 
     " Appearance
     Plug 'itchyny/lightline.vim' " Status line
     Plug 'edkolev/tmuxline.vim' " Tmux statusline that works with lightline
     Plug 'machakann/vim-highlightedyank' " Highlight copy/paste
     Plug 'ryanoasis/vim-devicons' " Cool icons
+    Plug 'luochen1990/rainbow'  " Colorful parentheses
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } "
 
     "Motion
     Plug 'tpope/vim-surround' 
-    Plug 'tpope/vim-repeat' " Repeat plugin commands with .
-    Plug 'scrooloose/nerdcommenter' " Comments
     Plug 'tpope/vim-unimpaired'
-    Plug 'christoomey/vim-tmux-navigator' " Easy navigation with tmux and vim
+    Plug 'tpope/vim-repeat' " Repeat plugin commands with .
     Plug 'tpope/vim-rsi'  " Emacs basic commands on insert mode
+    Plug 'scrooloose/nerdcommenter' " Comments
+    Plug 'christoomey/vim-tmux-navigator' " Easy navigation with tmux and vim
     Plug 'rbgrouleff/bclose.vim'  " Close buffer but not the window
 
     "Project
-    Plug 'sheerun/vim-polyglot' "Suport for syntax highlight on multiple languages
+    Plug 'sheerun/vim-polyglot' "Support for syntax highlight on multiple languages
     Plug 'honza/vim-snippets'  " Collection of snippets
-    Plug 'luochen1990/rainbow'  " Colorful parentheses
-    Plug 'tpope/vim-fugitive' " Git 
     Plug 'editorconfig/editorconfig-vim'
-    Plug 'airblade/vim-gitgutter'  " Show diff mark in sign column
-    Plug 'junegunn/fzf.vim'  " Fuzzy plugin for vim
-    Plug 'liuchengxu/vista.vim'
-    Plug 'Yggdroot/indentLine' " Vertical lines indentation
+    Plug 'liuchengxu/vista.vim' " View Tags
+    Plug 'Yggdroot/indentLine' " Minimalist vertical lines indentation
+    Plug 'metakirby5/codi.vim'  "
+    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " The glorious coc nvim
+    Plug 'gregsexton/MatchTag' " Match HTML tags
+    ""
+    Plug 'OmniSharp/omnisharp-vim'
+    Plug 'dense-analysis/ale'
+    "Plug 'jpalardy/vim-slime' "
+    "Plug 'Glench/Vim-Jinja2-Syntax'
+
+    "Enhancement
+    Plug 'mhinz/vim-startify' " 
     Plug 'preservim/nerdtree'  " Tree explorer
-    Plug 'Glench/Vim-Jinja2-Syntax'
-    Plug 'metakirby5/codi.vim'  " 
-    Plug 'gregsexton/MatchTag'
-    Plug 'jpalardy/vim-slime'
+    Plug 'airblade/vim-gitgutter'  " Show diff mark in sign column
+    Plug 'tpope/vim-fugitive' " Git 
+    Plug 'junegunn/fzf.vim'  " Fuzzy plugin for vim
 
-    Plug 'wakatime/vim-wakatime'  " Show how long I stay on vim
-    "Plug 'pope/vim-vinegar'
-     Plug 'mbbill/undotree'
+    Plug 'wakatime/vim-wakatime'  " Show how long I stay on vim, although it's a paid service and only records data about the last two weeks
+    "Plug 'mbbill/undotree'
+    "
     "Writing
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-    Plug 'vimwiki/vimwiki'
-    Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
-
-    "Plug 'reedes/vim-pencil'
+    Plug 'reedes/vim-pencil'
+    Plug 'junegunn/goyo.vim'
 
     "Notekeeping
     Plug 'vimwiki/vimwiki'

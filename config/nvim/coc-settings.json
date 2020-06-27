@@ -1,17 +1,25 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
-      "javascript",
-      "typescript",
-      "json",
-      "python",
-      "*.py"
+    "javascript",
+    "typescript",
+    "json",
+    "python",
+    "*.py"
   ],
-  "eslint.autoFixOnSave" : true,
+  "python.jediEnabled": false,
+  "eslint.autoFixOnSave": true,
   "python.linting.pylintArgs": ["--load-plugins", "pylint-flask"],
   "python.linting.pylintEnabled": true,
-  "python.formatting.blackPath":"/home/jvrn3/.local/bin/black",
+  "python.formatting.blackPath": "/home/jvrn3/.local/bin/black",
   "python.formatting.provider": "black",
   "snippets.extends": {
-      "javascriptreact": ["html", "javascript"]
-  }
+    "javascriptreact": ["html", "javascript"]
+  },
+  "python.venvFolders": [
+    "envs",
+    ".pyenv",
+    ".direnv",
+    "~/.local/share/virtualenvs",
+    "~/.cache/pypoetry/virtualenvs"
+  ]
 }
