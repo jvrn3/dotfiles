@@ -1,0 +1,1 @@
+/home/jvrn3/.local/share/omf/themes/idan/fish_prompt.fish
