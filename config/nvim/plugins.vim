@@ -18,7 +18,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } "
 
     "Motion
-    Plug 'tpope/vim-surround' 
+    Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-repeat' " Repeat plugin commands with .
     Plug 'tpope/vim-rsi'  " Emacs basic commands on insert mode
@@ -29,7 +29,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     "Project
     Plug 'sheerun/vim-polyglot' "Support for syntax highlight on multiple languages
     Plug 'honza/vim-snippets'  " Collection of snippets
-    Plug 'editorconfig/editorconfig-vim'
+    "Plug 'editorconfig/editorconfig-vim'
     Plug 'liuchengxu/vista.vim' " View Tags
     Plug 'Yggdroot/indentLine' " Minimalist vertical lines indentation
     Plug 'metakirby5/codi.vim'  "
@@ -38,18 +38,17 @@ call plug#begin('~/.local/share/nvim/plugged')
     ""
     Plug 'OmniSharp/omnisharp-vim'
     Plug 'dense-analysis/ale'
-    "Plug 'jpalardy/vim-slime' "
-    "Plug 'Glench/Vim-Jinja2-Syntax'
 
     "Enhancement
-    Plug 'mhinz/vim-startify' " 
-    Plug 'preservim/nerdtree'  " Tree explorer
+    "Plug 'mhinz/vim-startify' "
+    Plug 'preservim/nerdtree'  " Tree explorer, can be replaced by netrw
     Plug 'airblade/vim-gitgutter'  " Show diff mark in sign column
-    Plug 'tpope/vim-fugitive' " Git 
+    Plug 'tpope/vim-fugitive' " Git
     Plug 'junegunn/fzf.vim'  " Fuzzy plugin for vim
 
-    Plug 'wakatime/vim-wakatime'  " Show how long I stay on vim, although it's a paid service and only records data about the last two weeks
-    "Plug 'mbbill/undotree'
+    " Show how long I stay on vim, although it's a paid service
+    " and only records data about the last two weeks
+    Plug 'wakatime/vim-wakatime'
     "
     "Writing
     Plug 'reedes/vim-pencil'

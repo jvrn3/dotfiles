@@ -51,3 +51,13 @@ nnoremap <silent> <leader>ge :Gedit<CR>
 map <leader>s :setlocal spell! spelllang=en_US<CR>
 map <leader>ss :setlocal spell! spelllang=pt_BR<CR>
 
+:nnoremap <expr> <leader>r ':w!<cr>'.(
+    \ &ft=='python'     ? ':!time python %<cr>' :
+    \ &ft=='coc'        ? ':!time (coc type %:r; coc norm %:r)<cr>' :
+    \ &ft=='racket'     ? ':!racket %<cr>' :
+    \ &ft=='haskell'    ? ':!runghc --ghc-arg=-freverse-errors %<cr>' :
+    \ &ft=='javascript' ? ':!time node %<cr>' :
+    \ &ft=='typescript' ? ':!time ts-node %<cr>' :
+    \ ':!time cc %<cr>')
+
+map <leader>ev :e! ~/.config/nvim/

@@ -1,13 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "json",
-    "python",
-    "*.py"
-  ],
   "python.jediEnabled": false,
-  "eslint.autoFixOnSave": true,
   "python.linting.pylintArgs": ["--load-plugins", "pylint-flask"],
   "python.linting.pylintEnabled": true,
   "python.formatting.blackPath": "/home/jvrn3/.local/bin/black",

@@ -2,7 +2,7 @@
 
 set nocompatible
 set termguicolors
-let g:python3_host_prog = $HOME."/.pyenv/versions/neovim/bin/python" 
+"let g:python3_host_prog = $HOME."/.pyenv/versions/neovim/bin/python"
 "let g:python_host_prog = $HOME."/.pyenv/versions/neovim2/bin/python"
 
 let s:config_path = $HOME."/.config/nvim/"
@@ -30,8 +30,8 @@ for file in s:config_files
 	endif
 endfor
 
-map <leader>ev :e! ~/.vimrc<cr>
-set background=dark
+set background=light
 set encoding=UTF-8
-colorscheme base16-tomorrow-night
+"colorscheme base16-tomorrow-night
+colorscheme gruvbox
 
