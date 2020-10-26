@@ -61,3 +61,7 @@ map <leader>ss :setlocal spell! spelllang=pt_BR<CR>
     \ ':!time cc %<cr>')
 
 map <leader>ev :e! ~/.config/nvim/
+
+
+:nnoremap <F6> "=strftime("%d %h %Y")<CR>p
+

@@ -2,17 +2,18 @@ let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
 
 let g:coc_global_extensions = [
-            \ 'coc-json',  
+            \ 'coc-json',
+            \ 'coc-python',
             \  'coc-lists',
             \  'coc-vimlsp',
             \  'coc-tsserver',
             \ 'coc-eslint',
-            \  'coc-html', 
-            \  'coc-css', 
-            \  'coc-pairs', 
+            \  'coc-html',
+            \  'coc-css',
+            \  'coc-pairs',
             \  'coc-prettier',
-            \  'coc-highlight', 
-            \  'coc-snippets', 
+            \  'coc-highlight',
+            \  'coc-snippets',
             \  'coc-emmet',
 \ ]
 

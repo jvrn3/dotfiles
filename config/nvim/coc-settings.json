@@ -1,17 +1,16 @@
 {
-  "python.jediEnabled": false,
-  "python.linting.pylintArgs": ["--load-plugins", "pylint-flask"],
+  "python.pythonPath": "python",
+  "python.venvPath": "/home/jvrn3/venvs",
+
+  "python.jediEnabled": true,
+  "python.jediPath":"/home/jvrn3/.pyenv/versions/neovim3/lib/python3.8/site-packages",
   "python.linting.pylintEnabled": true,
-  "python.formatting.blackPath": "/home/jvrn3/.local/bin/black",
+  "python.linting.pylintPath": "/home/jvrn3/.pyenv/versions/neovim3/bin/pylint",
+  "python.linting.pylintArgs": ["--load-plugins", "pylint-django"],
+
   "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/home/jvrn3/.pyenv/versions/neovim3/bin/black",
   "snippets.extends": {
     "javascriptreact": ["html", "javascript"]
-  },
-  "python.venvFolders": [
-    "envs",
-    ".pyenv",
-    ".direnv",
-    "~/.local/share/virtualenvs",
-    "~/.cache/pypoetry/virtualenvs"
-  ]
+  }
 }

@@ -70,7 +70,4 @@ do
         echo "Creating symlink to $file in home directory"
         ln -s $dir/$file ~/.$file
     fi
-
-
-
 done
