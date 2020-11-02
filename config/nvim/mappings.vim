@@ -45,6 +45,8 @@ nnoremap <silent> <leader>gr  :Gread<CR>
 nnoremap <silent> <leader>gw  :Gwrite<CR>
 nnoremap <silent> <leader>gwq :Gwrite<CR>:qa<CR>
 nnoremap <silent> <leader>ge :Gedit<CR>
+nnoremap <silent> <leader>gj :diffget //3<CR>
+nnoremap <silent> <leader>gf :diffget //2<CR>
 
 
 " Spell check
