@@ -15,3 +15,9 @@ set NPM_PACKAGES "$HOME/.npm-packages"
 set PATH $NPM_PACKAGES/bin $PATH
 
 set MANPATH $NPM_PACKAGES/share/man $MANPATH
+
+
+# pyenv init
+if command -v pyenv 1>/dev/null 2>&1
+  pyenv init - | source
+end

@@ -1,13 +1,13 @@
 {
-  "python.pythonPath": "python",
-  "python.venvPath": "/home/jvrn3/venvs",
-
-  "python.jediEnabled": true,
-  "python.jediPath":"/home/jvrn3/.pyenv/versions/neovim3/lib/python3.8/site-packages",
+  "python.pythonPath": "~/.pyenv/shims/python",
+  "python.venvFolders":["envs", "venv", ".pyenv"],
+  "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-  "python.linting.pylintPath": "/home/jvrn3/.pyenv/versions/neovim3/bin/pylint",
-  "python.linting.pylintArgs": ["--load-plugins", "pylint-django"],
-
+  "python.jediEnabled": false,
+  "python.linting.pylintArgs": [
+    "--disable=C0111",
+    "--load-plugins",
+    "pylint_django"],
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/home/jvrn3/.pyenv/versions/neovim3/bin/black",
   "snippets.extends": {
