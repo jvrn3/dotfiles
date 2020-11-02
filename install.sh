@@ -23,18 +23,51 @@ func_install() {
     	sudo pacman -S --noconfirm --needed $1
     fi
 }
+yay_func_install() {
+	if pacman -Qi $1 &> /dev/null; then
+		tput setaf 2
+  		echo "###############################################################################"
+  		echo "################## The package "$1" is already installed"
+      	echo "###############################################################################"
+      	echo
+		tput sgr0
+	else
+    	tput setaf 3
+    	echo "###############################################################################"
+    	echo "##################  Installing package "  $1
+    	echo "###############################################################################"
+    	echo
+    	tput sgr0
+    	sudo yay -S --noconfirm --needed $1
+    fi
+}
 
-distribution=`cat /etc/*release | head -n 1 | awk '{print $1}'`
+distribution=`cat /etc/*release | grep -i '^ID' | awk '{print $1}'`
 list=(
-tmux
+    tmux
+    exa
+    mdcat
+    docker
 )
 
+list_yay=(
+    dust
+    bat
+    fd
+    neovim-nightly
+)
 for name in "${list[@]}" ; do
 	tput setaf 3;echo "Installing package " $name;tput sgr0;
 	func_install $name
 done
 
+for name in "${list_yay[@]}" ; do
+	tput setaf 3;echo "Installing package " $name;tput sgr0;
+	yay_func_install $name
+done
+
 echo ${distribution}
+
 green=`tput setaf 2`
 reset=`tput sgr0`
 dir=~/dotfiles
@@ -45,6 +78,7 @@ if [ ! -d ~/.config ]; then
 	echo "Creating config directory"
 	mkdir ~/.config
 fi
+
 if [ ! -d ~/.tmux ]; then
     echo "Creating ~/.tmux/"
     mkdir ~/.tmux
@@ -55,7 +89,7 @@ mkdir -p $olddir
 echo "#################"
 echo "Done"
 
-echo "${green}You should have nodejs and pip3 installed${reset}"
+echo "${green}You need nodejs and pip3 installed${reset}"
 cd $dir
 
 for file in $files;
@@ -70,7 +104,5 @@ do
         echo "Creating symlink to $file in home directory"
         ln -s $dir/$file ~/.$file
     fi
-
-
 
 done
