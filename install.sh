@@ -22,6 +22,8 @@ list_yay=(
     spotify
 )
 
+xfce4_config_folder="~/.config/xfce4/xfconf/xfce-perchannel-xml"
+
 func_install() {
 	if pacman -Qi $1 &> /dev/null; then
 		tput setaf 2
@@ -77,7 +79,7 @@ green=`tput setaf 2`
 reset=`tput sgr0`
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="gvimrc tmux.conf config/nvim tmux/theme "
+files="gvimrc tmux.conf config/nvim tmux/theme alacritty.yml"
 
 if [ ! -d ~/.config ]; then
 	echo "Creating config directory"
@@ -111,6 +113,12 @@ do
     fi
 
 done
+echo "moving xfce4 keyboard settings"
 
-echo "installing oh-my-fish"
-curl -L https://get.oh-my.fish | fish
+mv "$xfce4_config_folder/xfce4-keyboard-shortcuts.xml" $olddir/
+
+echo "creating xfce4 keyboard config symlink"
+
+ln -s "$dir/xfce4-keyboard-shortcuts.xml" "$xfce4_config_folder/xfce4-keyboard-shortcuts.xml"
+
+echo "Need to install oh my fish"
