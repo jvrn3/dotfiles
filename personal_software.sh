@@ -1,0 +1,4 @@
+list =(
+anki
+evince
+)

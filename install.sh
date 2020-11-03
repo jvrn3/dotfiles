@@ -5,6 +5,23 @@
 ####### You can find the code here:
 #### http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
 
+list=(
+    tmux
+    exa
+    mdcat
+    docker
+    fish
+    alacritty
+)
+
+list_yay=(
+    dust
+    bat
+    fd
+    neovim-nightly
+    spotify
+)
+
 func_install() {
 	if pacman -Qi $1 &> /dev/null; then
 		tput setaf 2
@@ -41,21 +58,9 @@ yay_func_install() {
     	sudo yay -S --noconfirm --needed $1
     fi
 }
+sudo pacman -Syyu
 
 distribution=`cat /etc/*release | grep -i '^ID' | awk '{print $1}'`
-list=(
-    tmux
-    exa
-    mdcat
-    docker
-)
-
-list_yay=(
-    dust
-    bat
-    fd
-    neovim-nightly
-)
 for name in "${list[@]}" ; do
 	tput setaf 3;echo "Installing package " $name;tput sgr0;
 	func_install $name
@@ -106,3 +111,6 @@ do
     fi
 
 done
+
+echo "installing oh-my-fish"
+curl -L https://get.oh-my.fish | fish
