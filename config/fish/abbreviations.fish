@@ -8,3 +8,4 @@ abbr --add mv 'mv --interactive --verbose'
 abbr --add cp 'cp --interactive --verbose'
 
 
+abbr --add ls 'exa'

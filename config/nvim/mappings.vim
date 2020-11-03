@@ -45,6 +45,8 @@ nnoremap <silent> <leader>gr  :Gread<CR>
 nnoremap <silent> <leader>gw  :Gwrite<CR>
 nnoremap <silent> <leader>gwq :Gwrite<CR>:qa<CR>
 nnoremap <silent> <leader>ge :Gedit<CR>
+nnoremap <silent> <leader>gj :diffget //3<CR>
+nnoremap <silent> <leader>gf :diffget //2<CR>
 
 
 " Spell check
@@ -61,3 +63,7 @@ map <leader>ss :setlocal spell! spelllang=pt_BR<CR>
     \ ':!time cc %<cr>')
 
 map <leader>ev :e! ~/.config/nvim/
+
+
+:nnoremap <F6> "=strftime("%d %h %Y")<CR>p
+

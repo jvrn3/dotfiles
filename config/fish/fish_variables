@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export PYENV_ROOT:/home/jvrn3/\x2epyenv
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_abc:abcde
@@ -11,6 +12,7 @@ SETUVAR _fish_abbr_gc:git\x20commit
 SETUVAR _fish_abbr_glo:git\x20log\x20\x2d\x2doneline
 SETUVAR _fish_abbr_gpl:git\x20pull
 SETUVAR _fish_abbr_gps:git\x20push
+SETUVAR _fish_abbr_ls:exa
 SETUVAR _fish_abbr_mv:mv\x20\x2d\x2dinteractive\x20\x2d\x2dverbose
 SETUVAR _fish_abbr_pipinstall:python3\x20\x2dm\x20pip\x20install
 SETUVAR _fish_abbr_pksyua:yay\x20\x2dSyu\x20\x2d\x2dnoconfirm
@@ -47,4 +49,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/home/jvrn3/\x2efzf/bin\x1e/home/jvrn3/\x2elocal/bin\x1e/home/jvrn3/\x2elocal/bin\x1e/home/jvrn3/\x2elocal/bin
+SETUVAR --export fish_user_paths:/home/jvrn3/\x2epyenv/bin\x1e/home/jvrn3/\x2epyenv//bin\x1e/home/jvrn3/\x2epyenv/bin\x1e/home/jvrn3/\x2efzf/bin\x1e/home/jvrn3/\x2elocal/bin\x1e/home/jvrn3/\x2elocal/bin\x1e/home/jvrn3/\x2elocal/bin\x1e/home/jvrn3/\x2egem/ruby/2\x2e7\x2e0/bin/\x1e/home/jvrn3/\x2egem/ruby/2\x2e7\x2e0/bin/\x1e/home/jvrn3/\x2epyenv/bin/\x1e/home/jvrn3/\x2epyenv/shims\x1e/home/jvrn3/\x2epyenv/bin

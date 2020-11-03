@@ -8,3 +8,7 @@ $ ./install.sh
 # Make sure you have tmux plugin manager installed for tmux and then run C-prefix I
 
 
+### Python stuff
+
+Install pyenv
+

@@ -1,3 +1,4 @@
+" DEPRECATED
 call plug#begin('~/.vim/plugged')
 
 "Appearance
@@ -12,7 +13,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'arcticicestudio/nord-vim'
 
-"Languages 
+"Languages
 " Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
@@ -44,7 +45,7 @@ Plug 'majutsushi/tagbar' " Provides a sidebar displaying ctags tags
 Plug 'jpalardy/vim-slime'
 let g:slime_target = "tmux"
 Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1 
+let g:rainbow_active = 1
 """
 "#####
 Plug 'alvan/vim-closetag'
@@ -111,10 +112,10 @@ set ruler  " Show cursor position
 set title "Show cursor position
 set nohlsearch
 syntax on
-filetype plugin on 
+filetype plugin on
 filetype indent on
 set noshowcmd "Display incomplete commands
-set cursorline " 
+set cursorline "
 
 set noshowmode " Display the mode you're in.
 set backspace=indent,eol,start " Intuitive backspacing.
@@ -126,13 +127,13 @@ set wildignore+=*.o
 set updatetime=300
 
 "search
-set ignorecase 
-set incsearch " Incremental search 
+set ignorecase
+set incsearch " Incremental search
 set smartcase
 set laststatus=2
 set t_Co=256
 set background=dark
-colorscheme nord 
+colorscheme nord
 
 set cmdheight=1
 " ========== Indentation ===========
@@ -185,7 +186,7 @@ map gd :bd<cr>
 " let g:ale_sign_column_always = 1
 " let g:ale_sign_error = '✖'
 " let g:ale_sign_warning = '⚠'
-" let g:ale_lint_on_enter=1 
+" let g:ale_lint_on_enter=1
 " nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 " nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
@@ -225,7 +226,7 @@ nnoremap zc zc
 "FZF
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 nnoremap <C-P> :Files<cr>
-nnoremap <C-F> :Ag 
+nnoremap <C-F> :Ag
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -255,7 +256,7 @@ let g:lightline = {
       \  'cocstatus': 'coc#status'
       \ },
       \ }
-	
+
 let g:lightline.tabline = {
   \   'left': [ ['tabs'] ],
   \   'right': [ ['close'] ]

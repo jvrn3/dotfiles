@@ -27,6 +27,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'rbgrouleff/bclose.vim'  " Close buffer but not the window
 
     "Project
+    "Plug 'vim-test/vim-test'
     Plug 'sheerun/vim-polyglot' "Support for syntax highlight on multiple languages
     Plug 'honza/vim-snippets'  " Collection of snippets
     "Plug 'editorconfig/editorconfig-vim'
@@ -36,8 +37,9 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " The glorious coc nvim
     Plug 'gregsexton/MatchTag' " Match HTML tags
     ""
-    Plug 'OmniSharp/omnisharp-vim'
-    Plug 'dense-analysis/ale'
+    "Plug 'OmniSharp/omnisharp-vim'
+    "Plug 'dense-analysis/ale'
+    Plug 'Glench/Vim-Jinja2-Syntax'
 
     "Enhancement
     "Plug 'mhinz/vim-startify' "
