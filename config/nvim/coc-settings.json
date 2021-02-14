@@ -1,15 +1,15 @@
 {
-  "python.pythonPath": "~/.pyenv/shims/python",
-  "python.venvFolders":["envs", "venv", ".pyenv"],
   "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": true,
-  "python.jediEnabled": false,
   "python.linting.pylintArgs": [
-    "--disable=C0111",
     "--load-plugins",
-    "pylint_django"],
+    "pylint_django",
+    "--django-settings-module",
+    "gerencial.settings"
+  ],
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "/home/jvrn3/.pyenv/versions/neovim3/bin/black",
+  "python.formatting.blackPath": "/home/jvrn/.pyenv/versions/neovim3/bin/black",
   "snippets.extends": {
     "javascriptreact": ["html", "javascript"]
   }

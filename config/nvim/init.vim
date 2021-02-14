@@ -29,8 +29,9 @@ for file in s:config_files
 	endif
 endfor
 
-set background=light
+set background=dark
 set encoding=UTF-8
 "colorscheme base16-tomorrow-night
 colorscheme gruvbox
 
+let g:kite_completions=0

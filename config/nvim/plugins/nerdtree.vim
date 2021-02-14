@@ -5,6 +5,6 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 1
-let g:webdevicons_enable_startify = 1
+
 let NERDTreeIgnore = ['^\.git$', '^\.expo$']
 
