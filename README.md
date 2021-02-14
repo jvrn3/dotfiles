@@ -1,3 +1,9 @@
+What needs to be done?
+----------------------
+- remove manually configuration from fish
+- organize the folder structure
+
+
 How to install:
 $ git clone https://github.com/jvrn3/dotfiles
 $ cd dotfiles
