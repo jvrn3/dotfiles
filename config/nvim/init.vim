@@ -4,6 +4,11 @@ set nocompatible
 set termguicolors
 let g:python3_host_prog = $HOME."/.pyenv/versions/neovim3/bin/python"
 
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 let s:config_path = $HOME."/.config/nvim/"
 let s:config_files = [
             \'common.vim',
@@ -32,5 +37,5 @@ endfor
 set background=light
 set encoding=UTF-8
 "colorscheme base16-tomorrow-night
-colorscheme gruvbox
+colorscheme solarized
 
