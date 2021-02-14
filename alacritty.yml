@@ -9,6 +9,7 @@ env:
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
   TERM: screen-256color
+
 # Font configuration (changes require restart)
 font:
   # The normal (roman) font face to use.
@@ -1262,6 +1263,5 @@ schemes:
       white:   '0xffffff'
 
 colors: *solarized_light
-
 
 live_config_reload: true

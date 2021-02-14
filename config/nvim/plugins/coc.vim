@@ -3,7 +3,7 @@ let g:coc_status_warning_sign = '•'
 
 let g:coc_global_extensions = [
             \ 'coc-json',
-            \ 'coc-python',
+            \ 'coc-pyright',
             \  'coc-lists',
             \  'coc-vimlsp',
             \  'coc-tsserver',
@@ -29,8 +29,11 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>ac  <Plug>(coc-codeaction)
 nmap <leader>qf  <Plug>(coc-fix-current)
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+command! -nargs=0 Format :call CocAction('format')
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 nmap <leader>f  <Plug>(coc-format-selected)
