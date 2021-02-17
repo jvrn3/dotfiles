@@ -4,11 +4,12 @@ set nocompatible
 set termguicolors
 let g:python3_host_prog = $HOME."/.pyenv/versions/neovim3/bin/python"
 
-if exists('+termguicolors')
-  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+"if exists('+termguicolors')
+  "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  "let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  "set termguicolors
+"endif
+set termguicolors
 let s:config_path = $HOME."/.config/nvim/"
 let s:config_files = [
             \'common.vim',

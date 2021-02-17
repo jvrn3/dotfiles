@@ -5,6 +5,10 @@ set -gx PATH $PATH /home/jvrn3/.gem/ruby/2.6.0/bin
 
 set -gx EDITOR "nvim --noplugin"
 
+set -gx  MANPATH /op/local/share/man:
+
+set -gx MANPAGER "nvim -c 'set ft=man' -"
+
 #status --is-interactive; and pyenv init - | source
 
 #status --is-interactive; and pyenv virtualenv-init - | source

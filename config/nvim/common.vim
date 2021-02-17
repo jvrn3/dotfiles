@@ -36,7 +36,7 @@ set undolevels=1500
 set lazyredraw
 
 set list
-set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set listchars=tab:→\ ,trail:⋅,extends:❯,precedes:❮
 
 set autoread
 
