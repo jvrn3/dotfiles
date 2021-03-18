@@ -38,7 +38,7 @@ nnoremap <C-y> 3<C-y>
 " Fugitive
 nnoremap <silent> <leader>gs  :Gstatus<CR>
 nnoremap <silent> <leader>gd  :Gvdiff<CR>
-nnoremap <silent> <leader>gc  :Gcommit<CR>
+nnoremap <silent> <leader>gc  :Git commit<CR>
 nnoremap <silent> <leader>gb  :Gblame<CR>
 nnoremap <silent> <leader>gp  :Git push<CR>
 nnoremap <silent> <leader>gr  :Gread<CR>

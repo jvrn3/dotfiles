@@ -1262,6 +1262,6 @@ schemes:
       cyan:    '0x00ffff'
       white:   '0xffffff'
 
-colors: *solarized_light
+colors: *gruvbox_dark
 
 live_config_reload: true
