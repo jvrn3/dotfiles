@@ -35,8 +35,17 @@ for file in s:config_files
 	endif
 endfor
 
-set background=dark
+set background=light
 set encoding=UTF-8
-"colorscheme base16-tomorrow-night
-colorscheme gruvbox
 
+let color_path = 'colorscheme.vim'
+if filereadable(s:config_path.color_path)
+  exec 'so '.s:config_path.color_path
+else
+  " Default color scheme
+  colorscheme ayu
+endif
+
+
+
+let g:slime_target = "tmux"

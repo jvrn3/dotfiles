@@ -58,7 +58,7 @@ map <leader>ss :setlocal spell! spelllang=pt_BR<CR>
     \ &ft=='coc'        ? ':!time (coc type %:r; coc norm %:r)<cr>' :
     \ &ft=='racket'     ? ':!racket %<cr>' :
     \ &ft=='scheme'     ? ':!racket %<cr>' :
-    \ &ft=='haskell'    ? ':!runghc --ghc-arg=-freverse-errors %<cr>' :
+    \ %ft=='sml'        ? ':!'
     \ &ft=='javascript' ? ':!time node %<cr>' :
     \ &ft=='typescript' ? ':!time ts-node %<cr>' :
     \ ':!time cc %<cr>')

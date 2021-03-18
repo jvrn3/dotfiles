@@ -42,6 +42,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
     "Enhancement
     "Plug 'mhinz/vim-startify' "
+    Plug 'jpalardy/vim-slime'
     Plug 'preservim/nerdtree'  " Tree explorer, can be replaced by netrw
     Plug 'airblade/vim-gitgutter'  " Show diff mark in sign column
     Plug 'tpope/vim-fugitive' " Git
