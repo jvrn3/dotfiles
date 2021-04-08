@@ -5,8 +5,7 @@
   "python.linting.pylintArgs": [
     "--load-plugins",
     "pylint_django",
-    "--django-settings-module",
-    "gerencial.settings"
+    "--django-settings-module"
   ],
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/home/jvrn/.pyenv/versions/neovim3/bin/black",

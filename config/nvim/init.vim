@@ -35,7 +35,7 @@ for file in s:config_files
 	endif
 endfor
 
-set background=light
+set background=dark
 set encoding=UTF-8
 
 let color_path = 'colorscheme.vim'
