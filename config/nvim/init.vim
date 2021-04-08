@@ -29,13 +29,13 @@ let s:config_files = [
             \'plugins/omnisharp.vim'
         \]
 
+set background=dark
 for file in s:config_files
 	if filereadable(s:config_path.file)
 		exec "so ".s:config_path.file
 	endif
 endfor
 
-set background=light
 set encoding=UTF-8
 
 let color_path = 'colorscheme.vim'

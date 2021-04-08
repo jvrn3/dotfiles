@@ -12,7 +12,8 @@ map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
 
-"nnoremap ; :Buffers<cr>
+nnoremap <leader>ww :Vista!!<cr>
+nnoremap <leader>bb :Buffers<cr>
 
 " Tab
 nnoremap <leader>t :tabnew<cr>
@@ -27,7 +28,7 @@ nnoremap z0 zR
 nnoremap zC zM
 nnoremap zc zc
 
-" Motio
+" Motion
 noremap H ^
 noremap L $
 

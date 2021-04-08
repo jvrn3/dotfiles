@@ -33,6 +33,8 @@ set linebreak
 set colorcolumn=80
 set undolevels=1500
 
+set foldmethod=indent
+
 set lazyredraw
 
 set list

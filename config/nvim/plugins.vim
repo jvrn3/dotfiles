@@ -32,26 +32,23 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'editorconfig/editorconfig-vim'
     Plug 'liuchengxu/vista.vim' " View Tags
     Plug 'Yggdroot/indentLine' " Minimalist vertical lines indentation
-    Plug 'metakirby5/codi.vim'  "
+    "Plug 'metakirby5/codi.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
     Plug 'gregsexton/MatchTag' " Match HTML tags
+    Plug 'tpope/vim-dadbod' " Database
     ""
-    "Plug 'OmniSharp/omnisharp-vim'
-    "Plug 'dense-analysis/ale'
-    Plug 'Glench/Vim-Jinja2-Syntax'
+
+    "Plug 'Glench/Vim-Jinja2-Syntax'
 
     "Enhancement
-    "Plug 'mhinz/vim-startify' "
-    Plug 'jpalardy/vim-slime'
+    "Plug 'mhinz/vim-startify'
+    Plug 'jpalardy/vim-slime' " REPL like
     Plug 'preservim/nerdtree'  " Tree explorer, can be replaced by netrw
     Plug 'airblade/vim-gitgutter'  " Show diff mark in sign column
     Plug 'tpope/vim-fugitive' " Git
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'  " Fuzzy plugin for vim
 
-    " Show how long I stay on vim, although it's a paid service
-    " and only records data about the last two weeks
-    "Plug 'wakatime/vim-wakatime'
     "
     "Writing
     Plug 'reedes/vim-pencil'
@@ -60,4 +57,5 @@ call plug#begin('~/.local/share/nvim/plugged')
     "Notekeeping
     Plug 'vimwiki/vimwiki'
     Plug 'ryanoasis/vim-devicons' " Cool icons
+    Plug 'junegunn/seoul256.vim'
 call plug#end()

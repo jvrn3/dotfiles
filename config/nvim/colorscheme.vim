@@ -1,2 +1,7 @@
 "let ayucolor="light"
-colorscheme gruvbox
+"colorscheme ayu
+"
+"
+let g:seoul256_background = 200
+color seoul256
+set background=dark
