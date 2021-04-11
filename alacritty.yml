@@ -10,35 +10,43 @@ env:
   # available, otherwise `xterm-256color` is used.
   TERM: screen-256color
 
+window:
+  decorations: full
+  startup_mode: Maximized
+  gtk_theme_variant: dark
+  dynamic_title: true
+
 # Font configuration (changes require restart)
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Source Code Pro
-    # Style can be specified to pick a specific face.
-    #style: Light
+    family: JetBrainsMono Nerd Font
+    style: Regular
     #
   # The bold font face
   bold:
-    family: Source Code Pro
-    # Style can be specified to pick a specific face.
-    # style: Bold
+    family: JetBrainsMono Nerd Font
+    style: Bold
     #
   # The italic font face
   italic:
-    family: Source Code Pro
-    # Style can be specified to pick a specific face.
-    # style: Italic
+    family: JetBrainsMono Nerd Font
+    style: Italic
     #
     #
     #
     #
-  size: 13.0
+  size: 14.0
   offset:
     x: 0
     y: 0
 
 
+shell:
+  program: /bin/bash
+  args:
+    - -c
+    - tmux
 schemes:
   afterglow: &afterglow
     primary:
@@ -1288,5 +1296,56 @@ schemes:
       cyan: '0x56d9ad' #14
       white: '0xfeffff' #15
 
-colors: *gruvbox_dark
+  seoul-256: &seoul-256
+    primary:
+      background: '#3a3a3a'
+      foreground: '#d0d0d0'
+
+    # Normal colors
+    normal:
+      black:   '#4e4e4e'
+      red:     '#d68787'
+      green:   '#5f865f'
+      yellow:  '#d8af5f'
+      blue:    '#85add4'
+      magenta: '#d7afaf'
+      cyan:    '#87afaf'
+      white:   '#d0d0d0'
+
+    # Bright colors
+    bright:
+      black:   '#626262'
+      red:     '#d75f87'
+      green:   '#87af87'
+      yellow:  '#ffd787'
+      blue:    '#add4fb'
+      magenta: '#ffafaf'
+      cyan:    '#87d7d7'
+      white:   '#e4e4e4'
+
+  sonokai_default: &sonokai_default
+      primary:
+        background: "0x2a2f38"
+        foreground: "0xe1e3e4"
+
+      normal:
+        black: "0x181a1c"
+        red: "0xff6578"
+        green: "0x9dd274"
+        yellow: "0xeacb64"
+        blue: "0x72cce8"
+        magenta: "0xba9cf3"
+        cyan: "0xf69c5e"
+        white: "0xe1e3e4"
+
+      bright:
+        black: "0x181a1c"
+        red: "0xff6578"
+        green: "0x9dd274"
+        yellow: "0xeacb64"
+        blue: "0x72cce8"
+        magenta: "0xba9cf3"
+        cyan: "0xf69c5e"
+        white: "0xe1e3e4"
+colors: *sonokai_default
 live_config_reload: true

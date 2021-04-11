@@ -8,6 +8,7 @@ set nohlsearch
 set ignorecase
 set title
 set smartcase
+set inccommand=nosplit
 
 set updatetime=300
 set hidden
@@ -32,6 +33,8 @@ set spelllang=pt_br,en_us
 set linebreak
 set colorcolumn=80
 set undolevels=1500
+
+set foldmethod=indent
 
 set lazyredraw
 
