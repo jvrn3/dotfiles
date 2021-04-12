@@ -15,6 +15,9 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'machakann/vim-highlightedyank' " Highlight copy/paste
     Plug 'luochen1990/rainbow'  " Colorful parentheses
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    Plug 'rktjmp/lush.nvim'
+    Plug 'npxbr/gruvbox.nvim'
+    Plug 'sainnhe/sonokai'
 
     "Motion
     Plug 'tpope/vim-surround'
@@ -27,7 +30,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 
     "Project
     "Plug 'vim-test/vim-test'
-    Plug 'sheerun/vim-polyglot' "Support for syntax highlight on multiple languages
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+    "Plug 'sheerun/vim-polyglot' "Support for syntax highlight on multiple languages
     Plug 'honza/vim-snippets'  " Collection of snippets
     Plug 'editorconfig/editorconfig-vim'
     Plug 'liuchengxu/vista.vim' " View Tags

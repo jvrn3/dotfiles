@@ -8,6 +8,7 @@ set nohlsearch
 set ignorecase
 set title
 set smartcase
+set inccommand=nosplit
 
 set updatetime=300
 set hidden

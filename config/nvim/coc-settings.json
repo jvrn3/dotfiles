@@ -5,11 +5,8 @@
   "python.linting.pylintArgs": [
     "--load-plugins",
     "pylint_django",
-    "--django-settings-module",
-    "gerencial.settings"
   ],
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "/home/jvrn/.pyenv/versions/neovim3/bin/black",
   "snippets.extends": {
     "javascriptreact": ["html", "javascript"]
   }
