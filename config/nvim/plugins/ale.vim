@@ -1,5 +1,6 @@
 let g:ale_linters = {
-            \'cs': ['OmniSharp']
+            \'elixir': ['credo']
             \}
 
 let g:ale_linters_explicit = 1
+let g:ale_disable_lsp = 1

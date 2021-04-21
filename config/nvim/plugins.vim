@@ -40,6 +40,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
     Plug 'gregsexton/MatchTag' " Match HTML tags
     Plug 'tpope/vim-dadbod' " Database
+    Plug 'elixir-editors/vim-elixir'
+    Plug 'dense-analysis/ale'
     ""
 
     "Plug 'Glench/Vim-Jinja2-Syntax'
