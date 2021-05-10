@@ -42,7 +42,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'gregsexton/MatchTag' " Match HTML tags
     Plug 'tpope/vim-dadbod' " Database
     Plug 'elixir-editors/vim-elixir'
-    "Plug 'dense-analysis/ale'
+    Plug 'dense-analysis/ale'
     ""
 
     "Plug 'Glench/Vim-Jinja2-Syntax'
@@ -64,5 +64,4 @@ call plug#begin('~/.local/share/nvim/plugged')
 
     "Notekeeping
     Plug 'vimwiki/vimwiki'
-    "Plug 'ryanoasis/vim-devicons' " Cool icons
 call plug#end()
