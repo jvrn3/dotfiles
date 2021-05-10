@@ -17,7 +17,6 @@ let s:config_files = [
             \'plugins/slime.vim',
             \'plugins/tmuxline.vim',
             \'plugins/pencil.vim',
-            \'plugins/ale.vim',
             \'plugins/omnisharp.vim'
             \'plugins/treesitter.vim'
         \]
@@ -37,6 +36,8 @@ else
   colorscheme ayu
 endif
 
+" TODO: refactor the code below to another file
+
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -45,7 +46,6 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
-
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:slime_target = "tmux"

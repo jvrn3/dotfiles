@@ -6,7 +6,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 
-
 call plug#begin('~/.local/share/nvim/plugged')
 
     " Appearance
@@ -15,12 +14,10 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'machakann/vim-highlightedyank' " Highlight copy/paste
     Plug 'luochen1990/rainbow'  " Colorful parentheses
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-    "Plug 'rktjmp/lush.nvim' " colorscheme
     Plug 'npxbr/gruvbox.nvim'
     Plug 'sainnhe/sonokai'
-    Plug 'junegunn/seoul256.vim'
 
-    "Motion
+    " Motion
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-repeat' " Repeat plugin commands with .
@@ -29,39 +26,33 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'christoomey/vim-tmux-navigator' " Easy navigation with tmux and vim
     Plug 'rbgrouleff/bclose.vim'  " Close buffer but not the window
 
-    "Project
-    "Plug 'vim-test/vim-test'
+    " Project
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-    "Plug 'sheerun/vim-polyglot' "Support for syntax highlight on multiple languages
     Plug 'honza/vim-snippets'  " Collection of snippets
     Plug 'editorconfig/editorconfig-vim'
     Plug 'liuchengxu/vista.vim' " View Tags
     Plug 'Yggdroot/indentLine' " Minimalist vertical lines indentation
-    "Plug 'metakirby5/codi.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
     Plug 'gregsexton/MatchTag' " Match HTML tags
     Plug 'tpope/vim-dadbod' " Database
     Plug 'elixir-editors/vim-elixir'
-    Plug 'dense-analysis/ale'
     ""
 
-    "Plug 'Glench/Vim-Jinja2-Syntax'
-
-    "Enhancement
-    "Plug 'mhinz/vim-startify'
+    " Enhancement
     Plug 'jpalardy/vim-slime' " REPL like
     Plug 'preservim/nerdtree'  " Tree explorer, can be replaced by netrw
-    Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'airblade/vim-gitgutter'  " Show diff mark in sign column
-    Plug 'tpope/vim-fugitive' " Git
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'  " Fuzzy plugin for vim
 
-    "
-    "Writing
+
+    " Git
+    Plug 'airblade/vim-gitgutter'  " Show diff mark in sign column
+    Plug 'tpope/vim-fugitive' " Git
+
+    " Writing
     Plug 'reedes/vim-pencil'
     Plug 'junegunn/goyo.vim'
 
-    "Notekeeping
+    " Notekeeping
     Plug 'vimwiki/vimwiki'
 call plug#end()

@@ -61,5 +61,3 @@ set wildignore+=.git,.hg,.svn
 
 autocmd FileType tex, latex, markdown, txt setlocal spell=en_US
 autocmd BufWritePre * %s/\s\+$//e
-
-
