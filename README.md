@@ -1,3 +1,12 @@
+My personal Linux configuration
+-------------------------------
+Stuff that I use:
+- Neovim
+- Tmux
+- Alacritty
+- XFCE
+- Fish Shell
+
 What needs to be done?
 ----------------------
 - remove manually configuration from fish
@@ -8,22 +17,8 @@ What needs to be done?
 
 
 How to install:
+```bash
 $ git clone https://github.com/jvrn3/dotfiles
 $ cd dotfiles
 $ ./install.sh
-
-
-* mdcat
-* dust
-* alacritty
-* neovim
-* to be done
-
-# Need nodejs and pynvim
-# Make sure you have tmux plugin manager installed for tmux and then run C-prefix I
-
-
-### Python stuff
-
-Install pyenv
-
+```
