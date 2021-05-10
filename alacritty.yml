@@ -20,17 +20,17 @@ window:
 font:
   # The normal (roman) font face to use.
   normal:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono
     style: Regular
     #
   # The bold font face
   bold:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono
     style: Bold
     #
   # The italic font face
   italic:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono
     style: Italic
     #
     #

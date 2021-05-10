@@ -1,15 +1,7 @@
 "A special thanks to /onlurking
-
-set nocompatible
-set termguicolors
 let g:python3_host_prog = $HOME."/.pyenv/versions/neovim3/bin/python"
 
-"if exists('+termguicolors')
-  "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-  "let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-  "set termguicolors
-"endif
-set termguicolors
+
 let s:config_path = $HOME."/.config/nvim/"
 let s:config_files = [
             \'common.vim',
@@ -27,6 +19,7 @@ let s:config_files = [
             \'plugins/pencil.vim',
             \'plugins/ale.vim',
             \'plugins/omnisharp.vim'
+            \'plugins/treesitter.vim'
         \]
 
 for file in s:config_files
@@ -35,7 +28,6 @@ for file in s:config_files
 	endif
 endfor
 
-set encoding=UTF-8
 
 let color_path = 'colorscheme.vim'
 if filereadable(s:config_path.color_path)
@@ -45,6 +37,15 @@ else
   colorscheme ayu
 endif
 
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+  },
+}
+EOF
 
 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:slime_target = "tmux"

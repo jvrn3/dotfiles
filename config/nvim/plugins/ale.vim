@@ -1,5 +1,3 @@
-let g:ale_linters = {
-            \'cs': ['OmniSharp']
-            \}
-
-let g:ale_linters_explicit = 1
+"let g:ale_linters = { 'elixir': ['credo']}
+"let g:ale_disable_lsp = 1
+"let g:ale_fixers = { 'elixir': ['mix_format'] }

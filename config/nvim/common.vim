@@ -3,13 +3,16 @@ set number relativenumber
 syntax on
 set ruler "Show cursor position
 
+set encoding=UTF-8
 " ======= SEARCH =======
 set nohlsearch
-set ignorecase
+set ignorecase " the case of normal letters is ignored
 set title
-set smartcase
-set inccommand=nosplit
+set smartcase " if the search contains upper case letter, ignorecase is disabled
+set inccommand=nosplit  " Shows the effects of a command incrementally
 
+
+set signcolumn=number
 set updatetime=300
 set hidden
 set cursorline
@@ -20,7 +23,6 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set mouse=a
-set termguicolors
 
 " ======= INDENTATION =======
 set autoindent
@@ -31,10 +33,11 @@ set noswapfile
 set scrolloff=3
 set spelllang=pt_br,en_us
 set linebreak
-set colorcolumn=80
+set colorcolumn=90
 set undolevels=1500
 
-set foldmethod=indent
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 
 set lazyredraw
 

@@ -15,9 +15,10 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'machakann/vim-highlightedyank' " Highlight copy/paste
     Plug 'luochen1990/rainbow'  " Colorful parentheses
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-    Plug 'rktjmp/lush.nvim'
+    "Plug 'rktjmp/lush.nvim' " colorscheme
     Plug 'npxbr/gruvbox.nvim'
     Plug 'sainnhe/sonokai'
+    Plug 'junegunn/seoul256.vim'
 
     "Motion
     Plug 'tpope/vim-surround'
@@ -40,6 +41,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
     Plug 'gregsexton/MatchTag' " Match HTML tags
     Plug 'tpope/vim-dadbod' " Database
+    Plug 'elixir-editors/vim-elixir'
+    "Plug 'dense-analysis/ale'
     ""
 
     "Plug 'Glench/Vim-Jinja2-Syntax'
@@ -48,6 +51,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     "Plug 'mhinz/vim-startify'
     Plug 'jpalardy/vim-slime' " REPL like
     Plug 'preservim/nerdtree'  " Tree explorer, can be replaced by netrw
+    Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'airblade/vim-gitgutter'  " Show diff mark in sign column
     Plug 'tpope/vim-fugitive' " Git
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -60,6 +64,5 @@ call plug#begin('~/.local/share/nvim/plugged')
 
     "Notekeeping
     Plug 'vimwiki/vimwiki'
-    Plug 'ryanoasis/vim-devicons' " Cool icons
-    Plug 'junegunn/seoul256.vim'
+    "Plug 'ryanoasis/vim-devicons' " Cool icons
 call plug#end()

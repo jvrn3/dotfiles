@@ -12,7 +12,7 @@ map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
 
-nnoremap <leader>ww :Vista!!<cr>
+nnoremap <leader>vi :Vista!!<cr>
 nnoremap <leader>bb :Buffers<cr>
 
 " Tab
@@ -37,7 +37,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 " Fugitive
-nnoremap <silent> <leader>gs  :Gstatus<CR>
+nnoremap <silent> <leader>gs  :Git<CR>
 nnoremap <silent> <leader>gd  :Gvdiff<CR>
 nnoremap <silent> <leader>gc  :Git commit<CR>
 nnoremap <silent> <leader>gb  :Gblame<CR>
@@ -55,11 +55,10 @@ map <leader>s :setlocal spell! spelllang=en_US<CR>
 map <leader>ss :setlocal spell! spelllang=pt_BR<CR>
 
 :nnoremap <expr> <leader>r ':w!<cr>'.(
-    \ &ft=='python'     ? ':!time python %<cr>' :
+    \ &ft=='python'     ? ':!time python3 %<cr>' :
     \ &ft=='coc'        ? ':!time (coc type %:r; coc norm %:r)<cr>' :
     \ &ft=='racket'     ? ':!racket %<cr>' :
     \ &ft=='scheme'     ? ':!racket %<cr>' :
-    \ %ft=='sml'        ? ':!'
     \ &ft=='javascript' ? ':!time node %<cr>' :
     \ &ft=='typescript' ? ':!time ts-node %<cr>' :
     \ ':!time cc %<cr>')

@@ -2,12 +2,9 @@
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": true,
-  "python.linting.pylintArgs": [
-    "--load-plugins",
-    "pylint_django",
-  ],
   "python.formatting.provider": "black",
   "snippets.extends": {
     "javascriptreact": ["html", "javascript"]
-  }
+  },
+    "elixir.pathToElixirLS": "/home/jvrn/.elixir-ls/release/language_server.sh"
 }
