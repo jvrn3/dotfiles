@@ -10,6 +10,7 @@ set ignorecase " the case of normal letters is ignored
 set title
 set smartcase " if the search contains upper case letter, ignorecase is disabled
 set inccommand=nosplit  " Shows the effects of a command incrementally
+set termguicolors
 
 
 set signcolumn=number
