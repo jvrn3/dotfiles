@@ -1,0 +1,9 @@
+let mapleader=","
+set surround
+set commentary
+
+
+map jk <ESC>
+" Do incremental searching.
+set incsearch
+set scrolloff=5
