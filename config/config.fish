@@ -1,8 +1,6 @@
 source "$HOME/.config/fish/abbreviations.fish"
 source "$HOME/.config/fish/aliases.fish"
 
-set -gx PATH $PATH /home/jvrn3/.gem/ruby/2.6.0/bin
-
 set -gx EDITOR "nvim --noplugin"
 
 set -gx  MANPATH /op/local/share/man:
