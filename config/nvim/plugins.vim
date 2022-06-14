@@ -8,6 +8,9 @@ endif
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+    " should check out"
+    "Plug 'kristijanhusak/orgmode.nvim'
+
     " Appearance
     Plug 'itchyny/lightline.vim' " Status line
     Plug 'edkolev/tmuxline.vim' " Tmux statusline that works with lightline
@@ -15,7 +18,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'luochen1990/rainbow'  " Colorful parentheses
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
     Plug 'npxbr/gruvbox.nvim'
-    Plug 'sainnhe/sonokai'
 
     " Motion
     Plug 'tpope/vim-surround'
@@ -25,17 +27,20 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'scrooloose/nerdcommenter' " Comments
     Plug 'christoomey/vim-tmux-navigator' " Easy navigation with tmux and vim
     Plug 'rbgrouleff/bclose.vim'  " Close buffer but not the window
+    Plug 'justinmk/vim-sneak'
 
     " Project
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+    Plug 'rktjmp/lush.nvim' "used for treesitter
     Plug 'honza/vim-snippets'  " Collection of snippets
     Plug 'editorconfig/editorconfig-vim'
     Plug 'liuchengxu/vista.vim' " View Tags
     Plug 'Yggdroot/indentLine' " Minimalist vertical lines indentation
     Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
     Plug 'gregsexton/MatchTag' " Match HTML tags
-    Plug 'tpope/vim-dadbod' " Database
-    Plug 'elixir-editors/vim-elixir'
+    "Plug 'tpope/vim-dadbod' " Database(should check if i'm using)
+    "Plug 'elixir-editors/vim-elixir' rarely use elixir
+    Plug 'neovimhaskell/haskell-vim'
     ""
 
     " Enhancement

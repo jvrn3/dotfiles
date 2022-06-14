@@ -62,16 +62,21 @@ yay_func_install() {
 }
 sudo pacman -Syyu
 
-distribution=`cat /etc/*release | grep -i '^ID' | awk '{print $1}'`
-for name in "${list[@]}" ; do
-	tput setaf 3;echo "Installing package " $name;tput sgr0;
-	func_install $name
-done
 
-for name in "${list_yay[@]}" ; do
-	tput setaf 3;echo "Installing package " $name;tput sgr0;
-	yay_func_install $name
-done
+distribution_type=`cat /etc/*release | grep -i '^ID_LIKE=' | cut -d= -f2`
+
+if [[ "$distribution_type"  == "arch" ]]; then
+    tput setaf 2; echo "you're using arch linux"
+    for name in "${list[@]}" ; do
+        tput setaf 3;echo "Installing package " $name;tput sgr0;
+        func_install $name
+    done
+
+    for name in "${list_yay[@]}" ; do
+        tput setaf 3;echo "Installing package " $name;tput sgr0;
+        yay_func_install $name
+    done
+fi
 
 echo ${distribution}
 
@@ -79,7 +84,7 @@ green=`tput setaf 2`
 reset=`tput sgr0`
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="gvimrc tmux.conf config/nvim tmux/theme alacritty.yml"
+files="gvimrc tmux.conf config/nvim tmux/theme alacritty.yml vrapperrc ideavimrc gitconfig"
 
 if [ ! -d ~/.config ]; then
 	echo "Creating config directory"

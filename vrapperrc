@@ -2,7 +2,7 @@ imap jk <ESC>
 set ignorecase " Case insensitive search
 set smartcase  " Non-case sensitive search
 set incsearch  " Incremental search
-set hlsearch   " Highlight search results
+set nohlsearch   " Highlight search results
 
 let mapleader=","
 
@@ -20,3 +20,12 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 set scrolloff=3
+
+eclipseaction eclipseopenresource org.eclipse.ui.navigate.openResource
+nnoremap <c-p> :eclipseopenresource<cr>
+
+eclipseuiaction eclipsequickfix org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+au "Dart Editor" eclipseuiaction eclipsequickfix com.google.dart.tools.ui.specific_content_assist.command
+nnoremap <backspace> :eclipsequickfix<cr>
+vnoremap <backspace> :eclipsequickfix<cr>
+
