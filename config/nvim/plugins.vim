@@ -17,6 +17,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'machakann/vim-highlightedyank' " Highlight copy/paste
     Plug 'luochen1990/rainbow'  " Colorful parentheses
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    Plug 'rktjmp/lush.nvim'
     Plug 'npxbr/gruvbox.nvim'
 
     " Motion
@@ -30,8 +31,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'justinmk/vim-sneak'
 
     " Project
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-    Plug 'rktjmp/lush.nvim' "used for treesitter
+    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
     Plug 'honza/vim-snippets'  " Collection of snippets
     Plug 'editorconfig/editorconfig-vim'
     Plug 'liuchengxu/vista.vim' " View Tags
@@ -49,10 +49,11 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'  " Fuzzy plugin for vim
 
-
-    " Git
+     " Git
     Plug 'airblade/vim-gitgutter'  " Show diff mark in sign column
     Plug 'tpope/vim-fugitive' " Git
+
+
 
     " Writing
     Plug 'reedes/vim-pencil'

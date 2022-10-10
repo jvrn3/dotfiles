@@ -8,8 +8,6 @@
 list=(
     tmux
     exa
-    mdcat
-    docker
     fish
     alacritty
 )
@@ -60,13 +58,13 @@ yay_func_install() {
     	sudo yay -S --noconfirm --needed $1
     fi
 }
-sudo pacman -Syyu
 
 
 distribution_type=`cat /etc/*release | grep -i '^ID_LIKE=' | cut -d= -f2`
 
 if [[ "$distribution_type"  == "arch" ]]; then
     tput setaf 2; echo "you're using arch linux"
+    sudo pacman -Syyu
     for name in "${list[@]}" ; do
         tput setaf 3;echo "Installing package " $name;tput sgr0;
         func_install $name
@@ -78,7 +76,6 @@ if [[ "$distribution_type"  == "arch" ]]; then
     done
 fi
 
-echo ${distribution}
 
 green=`tput setaf 2`
 reset=`tput sgr0`

@@ -1386,5 +1386,6 @@ schemes:
         - { index: 19, color: '0xd5c4a1' }
         - { index: 20, color: '0x665c54' }
         - { index: 21, color: '0x3c3836' }
-colors: *solarized_light
+colors: *gruvbox-light-base-16
+
 live_config_reload: true

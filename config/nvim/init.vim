@@ -1,5 +1,5 @@
 "A special thanks to /onlurking
-let g:python3_host_prog = $HOME."/.pyenv/versions/neovim3/bin/python"
+"let g:python3_host_prog = $HOME."/.pyenv/versions/neovim3/bin/python"
 
 
 let s:config_path = $HOME."/.config/nvim/"
@@ -38,14 +38,14 @@ endif
 
 " TODO: refactor the code below to another file
 
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-  },
-}
-EOF
+" lua <<EOF
+"require'nvim-treesitter.configs'.setup {
+"  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+"  highlight = {
+"    enable = true,              -- false will disable the whole extension
+"  },
+"}
+"EOF
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:slime_target = "tmux"
