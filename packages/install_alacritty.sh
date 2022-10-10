@@ -1,8 +1,7 @@
 print_install() {
-    	echo "###############################################################################"
-    	echo "##################  $1"
+    echo "###############################################################################"
+    echo "##################  $1"
 }
-
 install_alacritty(){
     print_install "Installing alacritty dependencies"
     apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
@@ -13,4 +12,5 @@ install_alacritty(){
     print_install "Installing alacritty"
     cargo install alacritty
 }
+
 install_alacritty

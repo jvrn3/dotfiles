@@ -11,7 +11,6 @@ What needs to be done?
 ----------------------
 - remove manually configuration from fish
 - organize the folder structure
-- add my xfce config
 - add gitconfig
 - add newsboat config
 
