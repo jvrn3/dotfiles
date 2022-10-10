@@ -2,8 +2,35 @@ let mapleader=","
 set surround
 set commentary
 
+set clipboard+=unnamed
+set clipboard+=ideaput
 
-map jk <ESC>
+imap jk <ESC>
 " Do incremental searching.
 set incsearch
 set scrolloff=5
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <s-TAB> :action NextTab<CR>
+
+nnoremap <Leader>en :action EditSourceInNewWindow<CR>
+nnoremap <Leader>n :action NextWindow<CR>nnoremap <Leader>q :action CloseContent<CR>
+
+
+nnoremap <Leader>qa :action CloseAllEditors<CR>
+

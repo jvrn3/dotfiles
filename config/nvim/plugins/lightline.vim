@@ -6,7 +6,6 @@ let g:lightline = {
             \   'right': [['lineinfo'], ['percent'], ['fileformat'], ['fileencoding'], ['filetype']]
             \ },
             \ 'component_function': {
-            \   'gitbranch': 'LightLineFugitive',
             \  'cocstatus': 'coc#status',
             \   'filetype': 'MyFiletype',
             \   'fileformat': 'MyFileformat',

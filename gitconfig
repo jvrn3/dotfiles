@@ -57,3 +57,5 @@
 
 [log]
 	abbrevCommit = true
+[safe]
+	directory = /home/jvrn3/dotfiles

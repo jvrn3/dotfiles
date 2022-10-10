@@ -59,6 +59,7 @@ map <leader>ss :setlocal spell! spelllang=pt_BR<CR>
     \ &ft=='racket'     ? ':!racket %<cr>' :
     \ &ft=='scheme'     ? ':!racket %<cr>' :
     \ &ft=='javascript' ? ':!time node %<cr>' :
+    \ &ft=='haskell' ? ':!time ghc %<cr>' :
     \ &ft=='typescript' ? ':!time ts-node %<cr>' :
     \ &ft=='kotlin'     ? ':!time kotlinc % -include-runtime -d %:r.jar; java -jar %:r.jar<cr>' :
     \ &ft=='sh'       ? ':!time bash %<cr>' :
