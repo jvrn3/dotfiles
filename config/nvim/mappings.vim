@@ -61,6 +61,7 @@ map <leader>ss :setlocal spell! spelllang=pt_BR<CR>
     \ &ft=='javascript' ? ':!time node %<cr>' :
     \ &ft=='typescript' ? ':!time ts-node %<cr>' :
     \ &ft=='kotlin'     ? ':!time kotlinc % -include-runtime -d %:r.jar; java -jar %:r.jar<cr>' :
+    \ &ft=='sh'       ? ':!time bash %<cr>' :
     \ ':!time cc %<cr>')
 
 map <leader>ev :e! ~/.config/nvim/
