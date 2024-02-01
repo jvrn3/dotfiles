@@ -3,4 +3,4 @@
 "color sonokai
 "set background=dark
 set background=light
-colorscheme gruvbox
+colorscheme darcula

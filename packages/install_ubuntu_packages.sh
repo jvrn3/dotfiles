@@ -13,6 +13,7 @@ list_apt=(
     neovim
 	calibre
     npm
+   python3-pip
 )
 
 print_install() {

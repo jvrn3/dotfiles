@@ -2,7 +2,7 @@ imap jk <ESC>
 set ignorecase " Case insensitive search
 set smartcase  " Non-case sensitive search
 set incsearch  " Incremental search
-set nohlsearch   " Highlight search results
+set nohlsearch
 
 let mapleader=","
 
@@ -21,11 +21,83 @@ nnoremap <C-y> 3<C-y>
 
 set scrolloff=3
 
+
+eclipseaction eclipsenextitem org.eclipse.ui.navigate.next
+nnoremap ]q :eclipsenextitem<cr>
+eclipseaction eclipsepreviousitem org.eclipse.ui.navigate.previous
+nnoremap [q :eclipsepreviousitem<cr>
+
+
+eclipseaction eclipsenextmember org.eclipse.jdt.ui.edit.text.java.goto.next.member
+nnoremap ]] :eclipsenextmember<cr>
+eclipseaction eclipseprevmember org.eclipse.jdt.ui.edit.text.java.goto.previous.member
+nnoremap [[ :eclipseprevmember<cr>
+
+
+eclipseaction eclipsecomparehead org.eclipse.egit.ui.team.CompareWithHead
+nnoremap Ud :eclipsecomparehead<cr>
+
+eclipseaction eclipsefindref org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace
+nnoremap gr :eclipsefindref<cr>
+
+eclipseaction eclipsegotoimpl org.eclipse.jdt.ui.edit.text.java.open.implementation
+nnoremap gd :eclipsegotoimpl<CR>
+
+
+
+" sneak
+
+nmap s <Plug>(sneak_s)
+nmap S <Plug>(sneak_S)
+
+nmap ; <Plug>(sneak-next)
+nmap , <Plug>(sneak-prev)
+
+vmap s <Plug>(sneak_s)
+vmap Z <Plug>(sneak_S)
+
+vmap ; <Plug>(sneak-next)
+vmap , <Plug>(sneak-prev)
+
+nmap F <Plug>(sneak_F)
+nmap t <Plug>(sneak_t)
+nmap T <Plug>(sneak_T)
+
+vmap F <Plug>(sneak_F)
+vmap t <Plug>(sneak_t)
+vmap T <Plug>(sneak_T)
+
+omap z <Plug>(sneak_s)
+omap Z <Plug>(sneak_S)
+
+
+" Like a 'Emacs' in insert mode.
+" --------------------------------------------------------------------------------
+inoremap <C-a> <Esc>0i
+inoremap <C-e> <Esc>:LineEnd<CR>a
+
+inoremap <C-f> <Esc><Right>a
+inoremap <C-b> <Esc>i
+inoremap <C-n> <Esc>:LineDown<CR>a
+inoremap <C-p> <Esc>:LineUp<CR>a
+
+inoremap <C-o> <Esc>o
+inoremap <C-h> <BS>
+inoremap <C-d> <Esc><Right>xi
+inoremap <C-k> <Esc><Right>:DeleteLineToEnd<CR>i
+
+
+" show documentation for current symbol
+eclipseuiaction eclipseshowdoc org.eclipse.ui.edit.text.showInformation
+nnoremap K   :eclipseshowdoc<cr>
+
 eclipseaction eclipseopenresource org.eclipse.ui.navigate.openResource
 nnoremap <c-p> :eclipseopenresource<cr>
 
-eclipseuiaction eclipsequickfix org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
-au "Dart Editor" eclipseuiaction eclipsequickfix com.google.dart.tools.ui.specific_content_assist.command
-nnoremap <backspace> :eclipsequickfix<cr>
-vnoremap <backspace> :eclipsequickfix<cr>
+" amazing 'omnibox' that searches buffers, commands, views, menus, preferences, etc.
+eclipseaction eclipsecmdsearch org.eclipse.ui.window.quickAccess
+nnoremap <space> :eclipsecmdsearch<cr>
+
+eclipseaction eclipsetogglebp org.eclipse.debug.ui.commands.ToggleBreakpoint
+nnoremap <insert> :eclipsetogglebp<cr>
 

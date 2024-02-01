@@ -13,4 +13,9 @@ install_alacritty(){
     cargo install alacritty
 }
 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 install_alacritty

@@ -1,6 +1,5 @@
 " TODO: comment all lines explaining the commands
 set number relativenumber
-syntax on
 set ruler "Show cursor position
 
 set encoding=UTF-8

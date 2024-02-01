@@ -55,3 +55,9 @@ echo "creating xfce4 keyboard config symlink"
 
 ln -s "$dir/xfce4-keyboard-shortcuts.xml" "$xfce4_config_folder/xfce4-keyboard-shortcuts.xml"
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+omf install l
+omf theme l
+
+

@@ -61,4 +61,5 @@ call plug#begin('~/.local/share/nvim/plugged')
 
     " Notekeeping
     Plug 'vimwiki/vimwiki'
+    Plug 'doums/darcula'
 call plug#end()

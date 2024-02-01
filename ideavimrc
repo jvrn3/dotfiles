@@ -1,9 +1,17 @@
-let mapleader=","
+nnoremap <SPACE> <Nop>
+map <Space> <Leader>
 set surround
 set commentary
+set NERDTree
+set easymotion
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
 
 set clipboard+=unnamed
 set clipboard+=ideaput
+
+noremap <C-y> 3<C- y>
+noremap <C-e> 3<C-e>
 
 imap jk <ESC>
 " Do incremental searching.
@@ -18,6 +26,19 @@ nnoremap <c--> :action SplitHorizontally<CR>
 nnoremap <c-=> :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 
+nnoremap <Leader>? :action GotoAction<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gD :action QuickImplementations<CR>
+nnoremap <Leader>r :action Refactorings.QuickListPopupAction<CR>
+nnoremap gr :action FindUsages<CR>
+nnoremap <Leader>gt :action GotoTest<CR>
+" nnoremap <c-r> :action RecentFiles<CR>
+nnoremap <leader>l :action RecentLocations<CR>
+nnoremap <leader>h  :action LocalHistory.ShowHistory<CR>
+
+nnoremap <leader>e :NERDTreeToggle<CR>
+
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
 nnoremap <c-h> <c-w>h
@@ -25,12 +46,53 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 
+" Buffer
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
+
+" Motion
+noremap H ^
+noremap L $
+
 nnoremap <TAB> :action PreviousTab<CR>
 nnoremap <s-TAB> :action NextTab<CR>
 
 nnoremap <Leader>en :action EditSourceInNewWindow<CR>
-nnoremap <Leader>n :action NextWindow<CR>nnoremap <Leader>q :action CloseContent<CR>
+nnoremap <Leader>n :action NextWindow<CR>
+nnoremap <Leader>q :action CloseContent<CR>
 
+vmap <leader>rm :action ExtractMethod<cr>
+vmap <leader>rv :action IntroduceVariable<cr>
+nmap <leader>rr :action RenameElement<cr>
+
+nmap <leader>/ :action Find<cr>
+nmap <leader>\ :action FindInPath<cr>
 
 nnoremap <Leader>qa :action CloseAllEditors<CR>
+nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
+nnoremap <Leader>br :action ViewBreakpoints<CR>
+
+
+" Navigate by method
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
+
+" Errors
+nmap [g :action GotoNextError<cr>
+nmap ]g :action GotoPreviousError<cr>
+
+
+nmap <C-o> :action Back<Cr>
+nmap <C-i> :action Forward<Cr>
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+nnoremap n nzz
+
 

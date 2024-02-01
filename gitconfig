@@ -1,17 +1,15 @@
 [credential]
 	helper = cache
 [user]
-	email = jvrn@protonmail.com
+	email = joao.neto@softplan.com.br
 	name = Joao Vitor Neto
 
-[merge]
-    ff = no
-    log=true
-    commit = no
-
 [core]
-	whitespace = -trailing-space
+	whitespace = cr-at-eol
 	renames = true
+[push]
+	default = current
+	autoSetupRemote = true
 [color]
 	ui = auto
 [color "branch"]
@@ -53,6 +51,8 @@
 	oops = commit --amend --no-edit
 	review-local = "!git lg @{push}.."
 	uncommit = reset --soft HEAD~1
+    feature = !sh -c 'git checkout -b feature-$1-$2' -
+    my-branches= !sh -c 'git branch -r | xargs -L1 git --no-pager show -s --oneline --author="$(git config user.name)"'
 
 
 [log]
