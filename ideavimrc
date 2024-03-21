@@ -55,7 +55,6 @@ map gd :bd<cr>
 noremap H ^
 noremap L $
 
-nnoremap <TAB> :action PreviousTab<CR>
 nnoremap <s-TAB> :action NextTab<CR>
 
 nnoremap <Leader>en :action EditSourceInNewWindow<CR>
