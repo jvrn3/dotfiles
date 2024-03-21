@@ -1,8 +1,0 @@
-- Eclipse
-- Intellij
-- Dbeaver
-- Fortclient ssl-vpn
-- Teams
-- Authy
-- Vscode
--
