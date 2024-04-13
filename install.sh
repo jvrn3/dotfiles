@@ -9,11 +9,9 @@
 green=$(tput setaf 2)
 reset=$(tput sgr0)
 
-xfce4_config_folder="~/.config/xfce4/xfconf/xfce-perchannel-xml"
-
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="tmux.conf config/nvim tmux/theme alacritty.yml ideavimrc gitconfig"
+files="tmux.conf  tmux/theme alacritty.yml ideavimrc gitconfig"
 
 if [ ! -d ~/.config ]; then
 	echo "Creating config directory"
@@ -46,15 +44,13 @@ for file in $files; do
 	fi
 
 done
-echo "moving xfce4 keyboard settings"
+#echo "moving xfce4 keyboard settings"
 
-mv "$xfce4_config_folder/xfce4-keyboard-shortcuts.xml" $olddir/
+#mv "$xfce4_config_folder/xfce4-keyboard-shortcuts.xml" $olddir/
 
-echo "creating xfce4 keyboard config symlink"
+#echo "creating xfce4 keyboard config symlink"
 
-ln -s "$dir/xfce4-keyboard-shortcuts.xml" "$xfce4_config_folder/xfce4-keyboard-shortcuts.xml"
+#ln -s "$dir/xfce4-keyboard-shortcuts.xml" "$xfce4_config_folder/xfce4-keyboard-shortcuts.xml"
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+#git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-omf install l
-omf theme l
