@@ -61,3 +61,6 @@
 	directory = /home/jvrn3/dotfiles
 [init]
 	defaultBranch = main
+[http]
+	sslVerify = false
+	postBuffer = 1048576000
